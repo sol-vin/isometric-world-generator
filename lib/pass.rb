@@ -1,0 +1,3 @@
+class Pass
+
+end

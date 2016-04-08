@@ -24,6 +24,4 @@ class IsometricPen
   def up
 
   end
-
-
 end

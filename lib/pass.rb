@@ -6,24 +6,23 @@ class Pass
 
       get_block_type: 3,
       get_block_rotation: 3,
-      get_block_color: 4,
+      get_block_color: 3,
       get_block_decorations: 3
   }
 
   CUSTOM_DEFAULTS = {
       get_tile_type: :none,
-      get_tile_rotation: :none,
+      get_tile_rotation: :zero_deg,
       get_tile_color: 0x000000,
 
       get_block_type: :none,
-      get_block_rotation: :none,
+      get_block_rotation: :zero_deg,
       get_block_color: 0x000000,
       get_block_decorations: [:none, :none, :none, :none]
   }
 
   # contains the blocks for generation
   attr_reader :customs
-  attr_reader :color_profiles
 
   def initialize(**options)
     @customs = {}
@@ -42,7 +41,11 @@ class Pass
   end
 
   def try_custom(name, *args)
-    customs[name].call(*args) || CUSTOM_DEFAULTS[:name]
+    if custom[name]
+      customs[name].call(*args)
+    else
+      CUSTOM_DEFAULTS[name]
+    end
   end
 
   CUSTOM_METHODS.keys.each do |method_name, method_args|

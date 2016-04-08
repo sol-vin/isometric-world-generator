@@ -1,7 +1,7 @@
 class IsometricAssets
   attr_reader :texture
   attr_reader :assets, :alias, :collections
-
+  attr_reader :width, :height
 
   def initialize(name)
     @assets = {}
@@ -27,6 +27,9 @@ class IsometricAssets
   end
 
   def open_content(name)
+    texture_path = content_path + "#{assets_name}/" + "texture.png"
+    texture_config = content_path + "#{assets_name}/" + "config.yml"
+
     # find all files from content directory
     Dir.entries(content_path + "#{assets_name}/").each do |block_asset|
       next if block_asset =~ /^\.*$/ #Returns . and . .as folders smh
@@ -39,11 +42,10 @@ class IsometricAssets
       #Load in each image and load into an array. assets[x][y]
       #combine images on one spritesheet in the root assets_name directory
       # should make two files
-      #   - texture_config.yml
+      #   - config.yml
+      #     - a list of source rectangles and their identifiers
       #   - texture.png
     end
-    # stitch them into a single texture
-    # create source rect information for retrieval
   end
 
   def read_texture_config(file)

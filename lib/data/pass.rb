@@ -23,8 +23,10 @@ class Pass
 
   # contains the blocks for generation
   attr_reader :customs
+  attr_reader :world
 
-  def initialize(**options)
+  def initialize(world, **options)
+    @world = world
     @customs = {}
 
     fail "Bad custom name in Pass" if options.keys.any? {|k| CUSTOM_METHODS[k]}

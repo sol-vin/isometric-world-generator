@@ -1,9 +1,9 @@
 class IsometricPen
-  attr_reader :canvas
+  attr_reader :world
   attr_accessor :x, :y, :z
 
-  def initialize(canvas)
-    @canvas = canvas
+  def initialize(world)
+    @world = world
     @x = 0
     @y = 0
     @z = 0
@@ -14,6 +14,9 @@ class IsometricPen
   end
 
   def move(**options) #{x: 0, y:0, z:0}
+    x = (options[:x] or 0)
+    y = (options[:y] or 0)
+    z = (options[:z] or 0)
 
   end
 
@@ -23,5 +26,9 @@ class IsometricPen
 
   def up
 
+  end
+
+  def make_draw &block
+    instance_exec &block
   end
 end

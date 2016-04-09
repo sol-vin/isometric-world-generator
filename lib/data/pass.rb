@@ -2,7 +2,7 @@ class Pass
   CUSTOM_METHODS = {
       get_tile_type: 2,
       get_tile_rotation: 2,
-      get_tile_color: 3,
+      get_tile_color: 2,
 
       get_block_type: 3,
       get_block_rotation: 3,
@@ -35,24 +35,39 @@ class Pass
   end
 
   def get_tile(x, y)
-    # Assemble the tile here
+    tile = Tile.new
+    tile.type = run(:get_tile_type, x, y)
+    tile.rotation = run(:get_tile_rotation, x, y)
+    tile.color = run(:get_tile_color, x, y)
+    tile
   end
 
   def get_block(x, y, z)
-    #assemble the block here
+    block = Block.new
+    block.type = run(:get_block_type, x, y, z)
+    block.rotation = run(:get_block_rotation, x, y, z)
+    block.color = run(:get_block_rotation, x, y, z)
+    block.decorations = run(:get_block_rotation, x, y, z)
+    block
   end
 
-  def try_custom(name, *args)
-    if custom[name]
-      customs[name].call(*args)
-    else
-      CUSTOM_DEFAULTS[name]
-    end
+  def define(name, &block)
+    fail "Bad custom name" unless CUSTOM_METHODS.keys.include? name
+    fail "Wrong number of arguments for custom" unless CUSTOM_METHODS[name] == block.parameters.count
+    @customs[name] = block
   end
 
-  CUSTOM_METHODS.keys.each do |method_name, method_args|
-    define_method method_name do |*args|
-      try_custom(__method__)
+  # Used to capture arguments to be passed to a block
+  def run(name, *args)
+    custom = self[name]
+    proc = Proc.new do
+      custom.call *args
     end
+
+    world.instance_exec &proc
+  end
+
+  def [] custom
+    @customs[custom]
   end
 end

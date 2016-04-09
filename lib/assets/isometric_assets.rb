@@ -1,7 +1,7 @@
 class IsometricAssets
   attr_reader :texture
   attr_reader :assets, :alias, :collections
-  attr_reader :width, :height
+  attr_reader :block_width, :block_height
 
   def initialize(name)
     @assets = {}
@@ -56,4 +56,11 @@ class IsometricAssets
     @assets[asset_name]
   end
 
+  def add_alias(key, asset)
+    @alias[key] = asset
+  end
+
+  def remove_alias(key)
+    @alias[key] = nil
+  end
 end

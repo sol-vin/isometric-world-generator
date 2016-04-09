@@ -1,9 +1,7 @@
 class IsometricPen
-  attr_reader :world
   attr_accessor :x, :y, :z
 
-  def initialize(world)
-    @world = world
+  def initialize()
     @x = 0
     @y = 0
     @z = 0
@@ -26,9 +24,5 @@ class IsometricPen
 
   def up
 
-  end
-
-  def make_draw &block
-    instance_exec &block
   end
 end

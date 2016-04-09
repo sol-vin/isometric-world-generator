@@ -1,3 +1,34 @@
+class Array
+  class << self
+    def make_2d_array(size_x, size_y, default = nil)
+      array = []
+      size_x.times do |x|
+        array << []
+        size_y.times do |y|
+          array[x] << []
+          array[x][y] = default
+        end
+      end
+      array
+    end
+
+    def make_3d_array(size_x, size_y, size_z, default = nil)
+      array = []
+      size_x.times do |x|
+        array << []
+        size_y.times do |y|
+          array[x] << []
+          size_z.times do |z|
+            array[x][y] << []
+            array[x][y][z] = default
+          end
+        end
+      end
+      array
+    end
+  end
+end
+
 class Hash
   #take keys of hash and transform those to a symbols
   def self.keys_to_sym(value)

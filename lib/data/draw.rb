@@ -1,13 +1,14 @@
 class Draw
   attr_reader :pen
   attr_reader :block
+  attr_reader :canvas
 
-  def intialize(pen, block)
+  def initialize(pen, &block)
     @pen = pen
     @block = block
   end
 
-  def draw
+  def draw canvas
     pen.instance_exec &block
   end
 end

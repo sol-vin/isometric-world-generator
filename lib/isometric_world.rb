@@ -10,8 +10,20 @@ class IsometricWorld
   def initialize
     @assets = IsometricAssets.new(assets_name)
     @view = VIEWS.values.last
-
   end
+
+  def get_tile_position(x, y)
+    spacing = Vector2.new((assets.block_width/2.0).round, (assets.block_height/2.0).round)
+    Vector2.new((-x * spacing.x) + (y * spacing.x) - y + x + OFFSET.x,
+                (x * spacing.y) + (y*spacing.y) - y - x + OFFSET.y)
+  end
+
+  def get_block_position(x, y, z)
+    position = get_tile_position(x,y)
+    position.y -= (assets.block_height / 2.0).round * (z + 1)
+    position
+  end
+
 
   #rotate the view counter clockwise
   def rotate_counter_clockwise

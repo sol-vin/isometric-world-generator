@@ -11,7 +11,4 @@ views:
     # if it has no rotation (:all means draw on all layers and overrides other rotations)
     # [:deg0, :deg90, :deg180, :deg270]
     rotation:
-      # The content layer asset. Each asset has a content and lighting layer. You can have on or the other.
-      content:
-        # Name of the png file from this dir to draw. (block_asset_name)
-        - block_asset_name
+      - block_asset_name

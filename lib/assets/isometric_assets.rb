@@ -1,3 +1,5 @@
+require 'rmagick'
+
 class IsometricAssets
   attr_reader :texture
   attr_reader :assets, :alias, :collections
@@ -26,18 +28,21 @@ class IsometricAssets
     home_path + "/saves/"
   end
 
-  def open_content(name)
+  def open_content(assets_name)
     texture_path = content_path + "#{assets_name}/" + "texture.png"
-    texture_config = content_path + "#{assets_name}/" + "config.yml"
+    texture_config_path = content_path + "#{assets_name}/" + "config.yml"
 
     # find all files from content directory
     Dir.entries(content_path + "#{assets_name}/").each do |block_asset|
-      next if block_asset =~ /^\.*$/ #Returns . and . .as folders smh
+      next if block_asset =~ /^\.*$/ #Returns . and . .as folders
       name = block_asset.to_sym
       puts "loading #{assets_name}/#{block_asset}"
 
       #try to assign images if they exist
       blocks_path = content_path + "#{assets_name}/" + "#{block_asset}/"
+      block_config_path = blocks_path + "config.yml"
+
+      block_config = read_texture_config(block_config_path)
 
       #Load in each image and load into an array. assets[x][y]
       #combine images on one spritesheet in the root assets_name directory
@@ -50,6 +55,10 @@ class IsometricAssets
 
   def read_texture_config(file)
     #read the texture config files in (YAML)
+    file = File.open(filename, "r")
+    yaml_dump = Hash.keys_to_sym YAML.load(file.read)
+    file.close
+    yaml_dump
   end
 
   def [] asset_name

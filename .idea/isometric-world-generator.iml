@@ -38,5 +38,6 @@
     <orderEntry type="library" scope="PROVIDED" name="gosu (v0.10.6, RVM: ruby-2.3.0 [icg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, RVM: ruby-2.3.0 [icg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="require_all (v1.3.3, RVM: ruby-2.3.0 [icg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rmagick (v2.15.4, RVM: ruby-2.3.0 [icg]) [gem]" level="application" />
   </component>
 </module>

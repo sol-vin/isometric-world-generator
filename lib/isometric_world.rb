@@ -7,13 +7,13 @@ class IsometricWorld
   attr_reader :view
   attr_reader :assets
 
-  def initialize
+  def initialize(assets_name)
     @assets = IsometricAssets.new(assets_name)
     @view = VIEWS.values.last
   end
 
   def get_tile_position(x, y)
-    spacing = Vector2.new((assets.block_width/2.0).round, (assets.block_height/2.0).round)
+    spacing = Vector2.new((assets.tile_width/2.0).round, (assets.tile_height/2.0).round)
     Vector2.new((-x * spacing.x) + (y * spacing.x) - y + x + OFFSET.x,
                 (x * spacing.y) + (y*spacing.y) - y - x + OFFSET.y)
   end

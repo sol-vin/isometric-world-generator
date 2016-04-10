@@ -1,14 +1,8 @@
 class Draw
-  attr_reader :pen
-  attr_reader :block
-  attr_reader :canvas
+  attr_reader :world
 
-  def initialize(pen, &block)
-    @pen = pen
-    @block = block
-  end
-
-  def draw canvas
-    pen.world.instance_exec &block
+  def initialize(world, **options)
+    @world = world
+    @custom = {}
   end
 end

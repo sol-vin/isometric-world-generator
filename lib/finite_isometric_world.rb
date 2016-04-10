@@ -25,8 +25,8 @@ class FiniteIsometricWorld < IsometricWorld
     clear_block_canvas
     make_passes
     make_draws
-    @block_pen = IsometricBlockPen.new
-    @tile_pen = IsometricTilePen.new
+    @block_pen = IsometricBlockPen.new self
+    @tile_pen = IsometricTilePen.new self
   end
 
   def clear_passes
@@ -115,17 +115,13 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
-  def run_tile_draw(draw)
-    fail NotImplementedError.new
-  end
-
   def run_block_pass(pass)
     each_block do |x, y, z|
       block_canvas[x][y][z] = pass.get_block(start_x + x, start_y + y, start_z + z)
     end
   end
 
-  def run_block_draw(draw)
+  def run_draw(draw)
     fail NotImplementedError.new
   end
 
@@ -136,11 +132,11 @@ class FiniteIsometricWorld < IsometricWorld
           run_tile_pass op
           run_block_pass op
         when Draw
-          run_tile_draw op
-          run_block_draw op
+          run_draw op
         else
           fail
       end
+      merge_canvases
     end
   end
 

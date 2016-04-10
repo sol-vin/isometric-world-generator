@@ -1,7 +1,9 @@
 class IsometricBlockPen
   attr_accessor :x, :y, :z
+  attr_accessor :world
 
-  def initialize()
+  def initialize(world)
+    @world = world
     up
     move_to(0,0,0)
   end

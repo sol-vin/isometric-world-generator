@@ -9,6 +9,6 @@ class Draw
   end
 
   def draw canvas
-    pen.instance_exec &block
+    pen.world.instance_exec &block
   end
 end

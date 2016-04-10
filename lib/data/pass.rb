@@ -12,11 +12,11 @@ class Pass
 
   CUSTOM_DEFAULTS = {
       get_tile_type: :none,
-      get_tile_rotation: :zero_deg,
+      get_tile_rotation: :deg0,
       get_tile_color: 0x000000,
 
       get_block_type: :none,
-      get_block_rotation: :zero_deg,
+      get_block_rotation: :deg0,
       get_block_color: 0x000000,
       get_block_decorations: [:none, :none, :none, :none]
   }

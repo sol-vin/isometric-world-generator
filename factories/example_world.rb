@@ -4,7 +4,7 @@ class ExampleWorld < FiniteIsometricWorld
   end
 
   def make_passes
-    @passes = []
+    super
 
     @passes[0] = Pass.new(self)
     @passes[0].define :get_block_type do |x, y, z|
@@ -28,6 +28,8 @@ class ExampleWorld < FiniteIsometricWorld
           0xFF_FF0000
         when 3
           0xFF_0000FF
+        else
+          0xFF_00FF00
       end
     end
   end

@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7d78f1-3f60-4319-8b0c-b4733c0e9b69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/block/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/block/light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/block/light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/block/shade_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/tile/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/block/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/tile/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/assets/texture_stitcher.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/isometric_asset.rb" afterPath="$PROJECT_DIR$/lib/assets/isometric_asset.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/isometric_assets.rb" afterPath="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/data/draw.rb" afterPath="$PROJECT_DIR$/lib/data/draw.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/finite_isometric_world.rb" afterPath="$PROJECT_DIR$/lib/finite_isometric_world.rb" />
     </list>
     <ignored path="isometric-world-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="finite_isometric_world.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finite_isometric_world.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.387097">
+            <state vertical-scroll-proportion="0.0">
               <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="isometric_assets.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="isometric_assets.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5391705">
+              <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -104,8 +93,8 @@
         <option value="$PROJECT_DIR$/lib/finite_isometric_world.rb" />
         <option value="$PROJECT_DIR$/content/simple/block/cfg.yml" />
         <option value="$PROJECT_DIR$/lib/assets/texture_stitcher.rb" />
-        <option value="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
         <option value="$PROJECT_DIR$/lib/assets/isometric_asset.rb" />
+        <option value="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
       </list>
     </option>
   </component>
@@ -145,8 +134,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,6 +302,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,14 +526,20 @@
       <option name="project" value="LOCAL" />
       <updated>1460317752581</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="7 broken">
+      <created>1460353894366</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1460353894366</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20563847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20784964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30933064" sideWeight="0.5063924" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -581,7 +576,8 @@
     <MESSAGE value="3 broken" />
     <MESSAGE value="5 broken" />
     <MESSAGE value="6 broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 broken" />
+    <MESSAGE value="7 broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="7 broken" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,6 +908,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -943,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -961,8 +950,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.387097">
+        <state vertical-scroll-proportion="0.0">
           <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5391705">
+          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding />
         </state>
       </provider>

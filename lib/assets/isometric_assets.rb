@@ -58,22 +58,15 @@ class IsometricAssets
         next if asset_file == "config.yml"
 
         asset_tag = asset_file.split(?.)[0].to_sym
+        assets[block_asset_name][tag] = [current_row, current_col]
+        assets_row_to_stitch << blocks_path + asset_file
 
         current_row += 1
       end
-      #Load in each image and load into an array. assets[x][y]
-      #combine images on one spritesheet in the root assets_name directory
-      # should make two files
-      #   - config.yml
-      #     - a list of source rectangles and their identifiers
-      #   - texture.png
+      assets_col_to_stitch << assets_row_to_stitch
+      current_col += 1
     end
-
-    current_col += 1
-  end
-
-  def read_texture_config(file)
-
+    #TextureStitcher.stitch(assets_col_to_stitch)
   end
 
   def [] asset_name

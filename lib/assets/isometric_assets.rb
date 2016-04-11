@@ -29,21 +29,38 @@ class IsometricAssets
   end
 
   def open_content(assets_name)
-    texture_path = content_path + "#{assets_name}/" + "texture.png"
-    texture_config_path = content_path + "#{assets_name}/" + "config.yml"
+    asset_path = content_path + "#{assets_name}/"
+    texture_path = asset_path + "texture.png"
+    texture_config_path = asset_path + "config.yml"
+
+    assets_col_to_stitch = []
+    current_col = 0
 
     # find all files from content directory
-    Dir.entries(content_path + "#{assets_name}/").each do |block_asset|
+    Dir.entries(asset_path).each do |block_asset|
       next if block_asset =~ /^\.*$/ #Returns . and . .as folders
-      name = block_asset.to_sym
+      block_asset_name = block_asset.to_sym
       puts "loading #{assets_name}/#{block_asset}"
 
       #try to assign images if they exist
-      blocks_path = content_path + "#{assets_name}/" + "#{block_asset}/"
+      blocks_path = asset_path + "#{block_asset}/"
       block_config_path = blocks_path + "config.yml"
 
       block_config = read_texture_config(block_config_path)
 
+      assets_row_to_stitch = []
+      current_row = 0
+
+      assets[block_asset_name] = IsometricAsset.new(self, block_asset_name)
+
+      Dir.entries(blocks_path).each do |asset_file|
+        next if block_asset =~ /^\.*$/ #Returns . and . .as folders
+        next if asset_file == "config.yml"
+
+        asset_tag = asset_file.split(?.)[0].to_sym
+
+        current_row += 1
+      end
       #Load in each image and load into an array. assets[x][y]
       #combine images on one spritesheet in the root assets_name directory
       # should make two files
@@ -51,14 +68,12 @@ class IsometricAssets
       #     - a list of source rectangles and their identifiers
       #   - texture.png
     end
+
+    current_col += 1
   end
 
   def read_texture_config(file)
-    #read the texture config files in (YAML)
-    file = File.open(filename, "r")
-    yaml_dump = Hash.keys_to_sym YAML.load(file.read)
-    file.close
-    yaml_dump
+
   end
 
   def [] asset_name

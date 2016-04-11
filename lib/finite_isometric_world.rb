@@ -5,18 +5,19 @@ class FiniteIsometricWorld < IsometricWorld
   attr_reader :x_range, :y_range, :z_range
   attr_reader :passes
   attr_reader :draws
-  attr_reader :pen
-  attr_reader :tiles
-  attr_reader :blocks
+  attr_reader :tiles, :blocks
 
-  attr_reader :tile_canvas
-  attr_reader :block_canvas
+  attr_reader :tile_canvas, :block_canvas
+
+  attr_reader :tile_pen, :block_pen
 
   def initialize(x_range, y_range, z_range, assets_name)
     super assets_name
     @x_range = x_range
     @y_range = y_range
     @z_range = z_range
+    @block_pen = IsometricBlockPen.new self
+    @tile_pen = IsometricTilePen.new self
 
 
     clear_tiles
@@ -25,12 +26,10 @@ class FiniteIsometricWorld < IsometricWorld
     clear_block_canvas
     make_passes
     make_draws
-    @block_pen = IsometricBlockPen.new self
-    @tile_pen = IsometricTilePen.new self
   end
 
   def clear_passes
-    @passes = []
+    @passes = {}
   end
 
   def clear_draws
@@ -115,15 +114,20 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
+  def run_tile_draw(draw)
+
+  end
+
   def run_block_pass(pass)
     each_block do |x, y, z|
       block_canvas[x][y][z] = pass.get_block(start_x + x, start_y + y, start_z + z)
     end
   end
 
-  def run_draw(draw)
-    fail NotImplementedError.new
+  def run_block_draw(draw)
+
   end
+
 
   def make_world
     make_operations.each do |op|
@@ -132,7 +136,7 @@ class FiniteIsometricWorld < IsometricWorld
           run_tile_pass op
           run_block_pass op
         when Draw
-          run_draw op
+          tile_
         else
           fail
       end

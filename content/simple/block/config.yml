@@ -1,0 +1,35 @@
+collections:
+  - blocks
+  - basic
+
+views:
+  north_west:
+    none:
+      - base
+      light_side:
+        color: 0x10ffffff
+        flip_h: true
+      light:
+        color: 0x10ffffff
+  north_east:
+    none:
+      - base
+      light_side:
+        color: 0x10ffffff
+      light:
+        color: 0x10ffffff
+  south_west:
+    none:
+      - base
+      shade_side:
+        color: 0x10ffffff
+        flip_h: true
+      light:
+        color: 0x10ffffff
+  south_east:
+    none:
+      - base
+      shade_side:
+        color: 0x10ffffff
+      light:
+        color: 0x10ffffff

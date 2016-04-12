@@ -1,4 +1,6 @@
-require_relative './passes'
+require_relative './data/pass'
+require_relative './data/draw'
+
 
 
 class FiniteIsometricWorld < IsometricWorld

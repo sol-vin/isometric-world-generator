@@ -5,7 +5,7 @@ collections:
 views:
   north_west:
     none:
-      - base
+      base: none
       light_side:
         color: 0x10ffffff
         flip_h: true
@@ -13,14 +13,14 @@ views:
         color: 0x10ffffff
   north_east:
     none:
-      - base
+      base: none
       light_side:
         color: 0x10ffffff
       light:
         color: 0x10ffffff
   south_west:
     none:
-      - base
+      base: none
       shade_side:
         color: 0x10ffffff
         flip_h: true
@@ -28,7 +28,7 @@ views:
         color: 0x10ffffff
   south_east:
     none:
-      - base
+      base: none
       shade_side:
         color: 0x10ffffff
       light:

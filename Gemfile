@@ -6,3 +6,4 @@ gemspec
 gem 'gosu'
 gem 'require_all'
 gem 'rmagick'
+gem 'perlin'

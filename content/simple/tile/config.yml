@@ -5,21 +5,13 @@ collections:
 views:
   north_west:
     none:
-      content:
-        base:
-          flip_h: false
+      base: none
   north_east:
     none:
-      content:
-        base:
-          flip_h: false
+      base: none
   south_west:
     none:
-      content:
-        base:
-          flip_h: false
+      base: none
   south_east:
     none:
-      content:
-        base:
-          flip_h: false
+      base: none

@@ -13,7 +13,7 @@ class IsometricAssets
   end
 
   def home_path
-    File.dirname("../" + File.absolute_path(__FILE__))
+    File.absolute_path(File.dirname(File.absolute_path(__FILE__ )) + '/../../')
   end
 
   def content_path
@@ -46,19 +46,18 @@ class IsometricAssets
       blocks_path = asset_path + "#{block_asset}/"
       block_config_path = blocks_path + "config.yml"
 
-      block_config = read_texture_config(block_config_path)
-
       assets_row_to_stitch = []
       current_row = 0
 
       assets[block_asset_name] = IsometricAsset.new(self, block_asset_name)
+      assets[block_asset_name].read_config(block_config_path)
 
       Dir.entries(blocks_path).each do |asset_file|
-        next if block_asset =~ /^\.*$/ #Returns . and . .as folders
+        next if asset_file =~ /^\.*$/ #Returns . and . .as folders
         next if asset_file == "config.yml"
 
         asset_tag = asset_file.split(?.)[0].to_sym
-        assets[block_asset_name][tag] = [current_row, current_col]
+        assets[block_asset_name][asset_tag] = [current_row, current_col]
         assets_row_to_stitch << blocks_path + asset_file
 
         current_row += 1
@@ -67,6 +66,8 @@ class IsometricAssets
       current_col += 1
     end
     #TextureStitcher.stitch(assets_col_to_stitch)
+
+    puts assets_col_to_stitch
   end
 
   def [] asset_name

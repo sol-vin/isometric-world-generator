@@ -1,4 +1,4 @@
-class ExampleWorld < FiniteIsometricWorld
+class EdgeWorld < FiniteIsometricWorld
   def initialize(size_x, size_y, size_z)
     super 0, size_x, 0, size_y, 0 , size_z, :simple
   end

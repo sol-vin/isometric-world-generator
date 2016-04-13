@@ -55,6 +55,7 @@ class IsometricAssets
       Dir.entries(blocks_path).each do |asset_file|
         next if asset_file =~ /^\.*$/ #Returns . and . .as folders
         next if asset_file == "config.yml"
+        next unless asset_file =~ /\.png$/
 
         asset_tag = asset_file.split(?.)[0].to_sym
         assets[block_asset_name][asset_tag] = [current_row, current_col]
@@ -65,9 +66,8 @@ class IsometricAssets
       assets_col_to_stitch << assets_row_to_stitch
       current_col += 1
     end
-    #TextureStitcher.stitch(assets_col_to_stitch)
 
-    puts assets_col_to_stitch
+
   end
 
   def [] asset_name

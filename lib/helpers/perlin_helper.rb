@@ -1,33 +1,25 @@
 require 'perlin'
 
-class FinitePerlinFactory < FiniteIsometricWorld
+module PerlinHelper
 
   PERLIN_STEP = 0.02
   PERLIN_OCTAVE = 8
   PERLIN_PERSIST = 0.03
   PERLIN_VALUE_MULTIPLIER = 9
-
-  attr_accessor :perlin_height_diminish
+  PERLIN_HEIGHT_DIMINISH = 1.0
 
   attr_reader :seed
-
-  def initialize(asset_name, size_x, size_y, size_z, seed)
-    super(asset_name, size_x, size_y, size_z)
-    self.seed = seed
-    @perlin_height_diminish = 1.0
-  end
 
   #new methods
 
   def seed=(value)
     @seed = value
     @perlin_noise = Perlin::Generator.new(seed, PERLIN_PERSIST, PERLIN_OCTAVE)
-    make_blocks
   end
 
 
   def get_perlin_height(x, y)
-    (get_perlin_noise(x, y) * size_z) * perlin_height_diminish
+    (get_perlin_noise(x, y) * size_z) * PERLIN_HEIGHT_DIMINISH
   end
 
   #gets perlin noise values from the generator

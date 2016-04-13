@@ -11,4 +11,4 @@ views:
     # if it has no rotation (:all means draw on all layers and overrides other rotations)
     # [:deg0, :deg90, :deg180, :deg270]
     rotation:
-      - block_asset_name
+      block_asset_name: none

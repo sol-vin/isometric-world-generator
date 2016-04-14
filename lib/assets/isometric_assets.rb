@@ -1,9 +1,11 @@
 require 'rmagick'
+require 'gosu'
 
 class IsometricAssets
-  attr_reader :texture
+  attr_reader :block_texture, :tile_texture, :config
   attr_reader :assets, :alias, :collections
   attr_reader :block_width, :block_height
+  attr_reader :tile_width, :block_width
 
   def initialize(name)
     @assets = {}
@@ -32,6 +34,9 @@ class IsometricAssets
     asset_path = content_path + "#{assets_name}/"
     texture_path = asset_path + "texture.png"
     texture_config_path = asset_path + "config.yml"
+
+    @config = read_texture_config(texture_config_path)
+
 
     assets_col_to_stitch = []
     current_col = 0
@@ -67,6 +72,18 @@ class IsometricAssets
       current_col += 1
     end
 
+    TextureStitcher.stitch(assets_col_to_stitch).write(texture_path)
+
+    @block_texture = Gosu::Image.load_tiles(block_texture_path, config[:block_height], config[:block_width], retro: true)
+    @block_texture = Gosu::Image.load_tiles(block_texture_path, config[:block_height], config[:block_width], retro: true)
+  end
+
+  def read_texture_config(config_yml)
+    #read the texture config files in (YAML)
+    file = File.open(config_yml, "r")
+    yaml_dump = Hash.keys_to_sym YAML.load(file.read)
+    file.close
+    @config = yaml_dump
 
   end
 

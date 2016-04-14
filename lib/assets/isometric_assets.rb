@@ -3,6 +3,7 @@ require 'gosu'
 
 require_relative './isometric_asset'
 require_relative './texture_stitcher'
+require_relative '../data/vector'
 require_relative '../monkey_patch'
 
 class IsometricAssets
@@ -12,7 +13,7 @@ class IsometricAssets
   attr_reader :tile_width, :block_width
 
   def initialize(name)
-    @assets = {}
+    @assets = {blocks: {}, tiles: {}}
     @alias = {}
 
     open_content name
@@ -39,18 +40,18 @@ class IsometricAssets
     tiles_asset_path = asset_path + "tiles/"
     blocks_asset_path = asset_path + "blocks/"
 
-    tile_texture_path = tiles_asset_path + "tiles.png"
-    block_texture_path = blocks_asset_path + "blocks.png"
+    tile_texture_path = asset_path + "tiles.png"
+    block_texture_path = asset_path + "blocks.png"
 
     texture_config_path = asset_path + "config.yml"
 
     @config = read_texture_config(texture_config_path)
 
     TextureStitcher.stitch(combine_texture_files(:tiles, tiles_asset_path)).write(tile_texture_path)
-    TextureStitcher.stitch(combine_texture_files(:block, blocks_asset_path)).write(block_texture_path)
+    TextureStitcher.stitch(combine_texture_files(:blocks, blocks_asset_path)).write(block_texture_path)
 
-    @block_texture = Gosu::Image.load_tiles(block_texture_path, config[:block_height], config[:block_width], retro: true)
-    @tile_texture = Gosu::Image.load_tiles(tile_texture_path, config[:tile_height], config[:tile_width], retro: true)
+    @block_texture = Gosu::Image.new(block_texture_path)
+    @tile_texture = Gosu::Image.new(tile_texture_path)
   end
 
   def combine_texture_files(type, type_asset_path)
@@ -59,7 +60,10 @@ class IsometricAssets
 
     # find all files from content directory
     Dir.entries(type_asset_path).each do |asset_name|
-      next if asset_name =~ /^\.*$/ #Returns . and . .as folders so we skip
+      next if asset_name =~ /^\.*$/ #Returns . and . .as folders
+      next if asset_name == "config.yml"
+      next unless File.directory?(type_asset_path + asset_name)
+
 
       asset_name = asset_name.to_sym
       puts "loading /#{type}/#{asset_name}"
@@ -67,6 +71,8 @@ class IsometricAssets
       #try to assign images if they exist
       asset_path = type_asset_path + "#{asset_name}/"
       asset_config_path = asset_path + "config.yml"
+
+      next unless File.exist?(asset_config_path)
 
       assets_row_to_stitch = []
       current_row = 0

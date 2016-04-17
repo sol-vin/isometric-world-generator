@@ -98,4 +98,12 @@ class IsometricAssets
   def remove_alias(key)
     @alias[key] = nil
   end
+
+  def draw_tile(tile, position)
+
+  end
+
+  def draw_block(block, position)
+
+  end
 end

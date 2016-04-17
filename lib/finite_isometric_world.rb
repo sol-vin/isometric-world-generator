@@ -6,20 +6,20 @@ require_relative './data/draw'
 class FiniteIsometricWorld < IsometricWorld
   attr_reader :x_range, :y_range, :z_range
   attr_reader :passes
-  attr_reader :draws
+  #attr_reader :draws
   attr_reader :tiles, :blocks
 
   attr_reader :tile_canvas, :block_canvas
 
-  attr_reader :tile_pen, :block_pen
+  #attr_reader :tile_pen, :block_pen
 
   def initialize(x_range, y_range, z_range, assets_name)
     super assets_name
     @x_range = x_range
     @y_range = y_range
     @z_range = z_range
-    @block_pen = IsometricBlockPen.new self
-    @tile_pen = IsometricTilePen.new self
+    #@block_pen = IsometricBlockPen.new self
+    #@tile_pen = IsometricTilePen.new self
 
 
     clear_tiles
@@ -27,16 +27,16 @@ class FiniteIsometricWorld < IsometricWorld
     clear_blocks
     clear_block_canvas
     make_passes
-    make_draws
+    #make_draws
   end
 
   def clear_passes
     @passes = {}
   end
 
-  def clear_draws
-    @draws = {}
-  end
+  # def clear_draws
+  #   @draws = {}
+  # end
 
   def clear_tiles
     @tiles = Array.make_2d_array(size_x, size_y, :none)
@@ -59,9 +59,9 @@ class FiniteIsometricWorld < IsometricWorld
     clear_passes
   end
 
-  def make_draws
-    clear_draws
-  end
+  # def make_draws
+  #   clear_draws
+  # end
 
   def merge_canvases
     size_x.times do |x|
@@ -116,9 +116,9 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
-  def run_tile_draw(draw)
-
-  end
+  # def run_tile_draw(draw)
+  #   fail NotImplementedError
+  # end
 
   def run_block_pass(pass)
     each_block do |x, y, z|
@@ -126,9 +126,9 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
-  def run_block_draw(draw)
-
-  end
+  # def run_block_draw(draw)
+  #   fail NotImplementedError
+  # end
 
 
   def make_world
@@ -147,7 +147,8 @@ class FiniteIsometricWorld < IsometricWorld
   end
 
   def draw_tile(x_pos, y_pos, x, y)
-
+    tile = tiles[x][y]
+    assets.draw_tile(tile, get_tile_position(x_pos, y_pos))
   end
 
   def draw_tiles
@@ -182,7 +183,8 @@ class FiniteIsometricWorld < IsometricWorld
   end
 
   def draw_block(x_pos, y_pos, z_pos, x, y, z)
-
+    block = blocks[x][y][z]
+    assets.draw_block(block, get_block_position(x_pos, y_pos, z_pos))
   end
 
   def draw_blocks

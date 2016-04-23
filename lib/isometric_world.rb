@@ -1,4 +1,12 @@
 class IsometricWorld
+  class << self
+    attr_reader :worlds
+
+    def inherited(base)
+        @worlds[base.to_s.to_sym] = base
+    end
+  end
+
   #Hash of direction keys, which way the camera is facing and what direction is facing clockwise
   DIRECTIONS = [:north, :south, :east, :west]
   VIEWS = {north_west: :south_west, north_east: :north_west, south_east: :north_east, south_west: :south_east}
@@ -7,8 +15,8 @@ class IsometricWorld
   attr_reader :view
   attr_reader :assets
 
-  def initialize(assets_name)
-    @assets = IsometricAssets.new(assets_name)
+  def initialize(**options)
+    @assets = IsometricAssets.new(options[:asset_name])
     @view = VIEWS.values.last
   end
 

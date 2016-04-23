@@ -8,13 +8,12 @@ require_relative '../monkey_patch'
 
 class IsometricAssets
   attr_reader :block_texture, :tile_texture, :config
-  attr_reader :assets, :alias, :collections
+  attr_reader :assets, :collections
   attr_reader :block_width, :block_height
   attr_reader :tile_width, :block_width
 
   def initialize(name)
     @assets = {blocks: {}, tiles: {}}
-    @alias = {}
 
     open_content name
   end
@@ -107,28 +106,22 @@ class IsometricAssets
   end
 
   def [] type
-    if :blocks
+    if type == :blocks
       blocks
-    elsif :tiles
+    elsif type == :tiles
       tiles
     else
       fail
     end
   end
 
-  def add_alias(key, asset)
-    @alias[key] = asset
+  def draw_tile(tile, view, position)
+    tile_asset = self[:tiles][tile.type]
+    tile_asset.draw_asset(position.x,  position.y, tile.color, view, tile.rotation)
   end
 
-  def remove_alias(key)
-    @alias[key] = nil
-  end
-
-  def draw_tile(tile, position)
-
-  end
-
-  def draw_block(block, position)
-
+  def draw_block(block, view, position)
+    block_asset = self[:blocks][block.type]
+    block_asset.draw_asset(position.x,  position.y, block.color, view, block.rotation)
   end
 end

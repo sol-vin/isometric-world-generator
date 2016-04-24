@@ -9,8 +9,7 @@ module PerlinHelper
   PERLIN_HEIGHT_DIMINISH = 1.0
 
   attr_reader :seed
-
-  #new methods
+  attr_accessor :max_height
 
   def seed=(value)
     @seed = value
@@ -19,7 +18,7 @@ module PerlinHelper
 
 
   def get_perlin_height(x, y)
-    (get_perlin_noise(x, y) * size_z) * PERLIN_HEIGHT_DIMINISH
+    (get_perlin_noise(x, y) * max_height) * PERLIN_HEIGHT_DIMINISH
   end
 
   #gets perlin noise values from the generator

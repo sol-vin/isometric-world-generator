@@ -11,12 +11,14 @@ class PyramidWorld < FiniteIsometricWorld
 
 
     @passes[0].define :get_block_type do |x, y, z|
-      mod_x = x % 5
-      mod_y = y % 5
+      mod_x = x % 7
+      mod_y = y % 7
 
-      if z == 1 and mod_x == 3 and mod_y == 3
+      if z == 2 and mod_x == 3 and mod_y == 3
         :block
-      elsif z == 0 and (2..4).include?(mod_x) and (2..4).include?(mod_y)
+      elsif z == 1 and (2..4).include?(mod_x) and (2..4).include?(mod_y)
+        :block
+      elsif z == 0 and (1..5).include?(mod_x) and (1..5).include?(mod_y)
         :block
       else
         nil
@@ -24,7 +26,14 @@ class PyramidWorld < FiniteIsometricWorld
     end
 
     @passes[0].define :get_block_color do |x, y, z|
-      0xFF_FF0000
+      case z
+        when 0
+          0xFF_FF0000
+        when 1
+          0xFF_FF7700
+        when 2
+          0xFF_FFFF00
+      end
     end
   end
 end

@@ -10,7 +10,6 @@ class IsometricAssets
   attr_reader :block_texture, :tile_texture, :config
   attr_reader :assets, :collections
   attr_reader :block_width, :block_height
-  attr_reader :tile_width, :block_width
 
   def initialize(name)
     @assets = {blocks: {}, tiles: {}}
@@ -107,9 +106,9 @@ class IsometricAssets
 
   def [] type
     if type == :blocks
-      blocks
+      assets[:blocks]
     elsif type == :tiles
-      tiles
+      assets[:tiles]
     else
       fail
     end
@@ -124,4 +123,19 @@ class IsometricAssets
     block_asset = self[:blocks][block.type]
     block_asset.draw_asset(position.x,  position.y, block.color, view, block.rotation)
   end
+
+  def tile_width
+    config[:tile_width]
+  end
+  def tile_height
+    config[:tile_height]
+  end
+
+  def block_width
+    config[:block_width]
+  end
+  def block_height
+    config[:block_height]
+  end
+
 end

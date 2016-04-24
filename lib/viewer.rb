@@ -1,9 +1,14 @@
+require 'benchmark'
 require 'gosu'
+
+require_relative './monkey_patch'
+require_rel './worlds/'
 
 class Viewer < Gosu::Window
 
   class Key
     @keys = []
+
     class << self
       def keys
         @keys
@@ -22,7 +27,7 @@ class Viewer < Gosu::Window
 
     def initialize key
       @key = key
-      @keys << self
+      self.class.keys << self
     end
 
     def update window
@@ -51,9 +56,9 @@ class Viewer < Gosu::Window
   end
 
   CAMERA_SPEED = 10
-  SIZE_X = 50
-  SIZE_Y = 50
-  SIZE_Z = 8
+  SIZE_X = 3
+  SIZE_Y = 3
+  SIZE_Z = 3
   def initialize
     super(1200, 600, false)
 
@@ -67,6 +72,7 @@ class Viewer < Gosu::Window
 
 
     @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
+    @world.make_world
 
     @time = 0
 
@@ -139,13 +145,13 @@ class Viewer < Gosu::Window
       @zoom = 0 if @zoom < 0
     end
 
-    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps} seed: #{@world.seed} g_t: #{@world.fill_cache_time} d_t: #{@time} debug:#{@world.debug}"
+    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, g_t: #{} d_t: #{@time}"
 
     Key.post_update_keys self
   end
 
   def get_current_world
-    IsometricWorld.worlds[IsometricWorld.worlds.keys[@generator]]
+    IsometricWorlds[IsometricWorlds.world_names[@generator]]
   end
 
   def draw

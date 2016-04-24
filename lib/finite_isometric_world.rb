@@ -1,10 +1,7 @@
 require_relative './data/pass'
-require_relative './data/draw'
-
-
 
 class FiniteIsometricWorld < IsometricWorld
-  IsometricWorld.worlds[:FiniteIsometricWorld] = nil
+  IsometricWorlds.delete(:FiniteIsometricWorld)
 
   #ranges of the blocks to display.
   attr_reader :x_range, :y_range, :z_range
@@ -12,7 +9,7 @@ class FiniteIsometricWorld < IsometricWorld
   #holds generation passes
   attr_reader :passes
 
-  #holds the blocks from the last completed pass/draw
+  #holds the blocks from the last completed pass
   attr_reader :tiles, :blocks
 
   #holds temporary blocks to be transfered after a pass has finished
@@ -39,20 +36,20 @@ class FiniteIsometricWorld < IsometricWorld
   end
 
   def clear_tiles
-    @tiles = Array.make_2d_array(size_x, size_y, :none)
+    @tiles = Array.make_2d_array(x_range.last, y_range.last, :none)
   end
 
   def clear_tile_canvas
-    @tile_canvas = Array.make_2d_array(size_x, size_y)
+    @tile_canvas = Array.make_2d_array(x_range.last, y_range.last)
   end
 
 
   def clear_blocks
-    @blocks = Array.make_3d_array(size_x, size_y, size_z, :none)
+    @blocks = Array.make_3d_array(x_range.last, y_range.last, z_range.last, :none)
   end
 
   def clear_block_canvas
-    @block_canvas = Array.make_3d_array(size_x, size_y, size_z)
+    @block_canvas = Array.make_3d_array(x_range.last, y_range.last, z_range.last)
   end
 
   # method to be overridden to define passes.
@@ -118,33 +115,35 @@ class FiniteIsometricWorld < IsometricWorld
 
   def draw_tile(x_pos, y_pos, x, y)
     tile = tiles[x][y]
+    return if tile == :none
+
     assets.draw_tile(tile, view, get_tile_position(x_pos, y_pos))
   end
 
-  def draw_tiles
+  def draw_all_tiles
     case view
       when :south_east
         y_range.each do |y|
           x_range.each do |x|
-            draw_tile(x, y, x, y)
+            draw_tile(x - x_range.first, y - y_range.first, x, y)
           end
         end
       when :south_west
         x_range.each do |y|
           y_range.each do |x|
-            draw_tile(x, y, size_x - 1 - y, x)
+            draw_tile(x - x_range.first, y - y_range.first, size_x - 1 - y, x)
           end
         end
       when :north_west
         y_range.each do |y|
           x_range.each do |x|
-            draw_tile(x, y, size_x - 1 - x, size_y - 1- y)
+            draw_tile(x - x_range.first, y - y_range.first, size_x - 1 - x, size_y - 1- y)
           end
         end
       when :north_east
         x_range.each do |y|
           y_range.each do |x|
-            draw_tile(x, y, y, size_y - 1 - x)
+            draw_tile(x - x_range.first, y - y_range.first, y, size_y - 1 - x)
           end
         end
       else
@@ -154,10 +153,11 @@ class FiniteIsometricWorld < IsometricWorld
 
   def draw_block(x_pos, y_pos, z_pos, x, y, z)
     block = blocks[x][y][z]
+    return if block == :none
     assets.draw_block(block, view, get_block_position(x_pos, y_pos, z_pos))
   end
 
-  def draw_blocks
+  def draw_all_blocks
     case view
       when :south_east
         y_range.each do |y|
@@ -194,5 +194,10 @@ class FiniteIsometricWorld < IsometricWorld
       else
         throw Exception.new("view was out of bounds!")
     end
+  end
+
+  def draw_world
+    draw_all_tiles if draw_tiles?
+    draw_all_blocks if draw_blocks?
   end
 end

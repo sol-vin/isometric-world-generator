@@ -37,17 +37,19 @@ class Pass
   def get_tile(x, y)
     tile = Tile.new
     tile.type = run(:get_tile_type, x, y)
-    tile.rotation = run(:get_tile_rotation, x, y)
-    tile.color = run(:get_tile_color, x, y)
+    return nil unless tile.type
+    tile.rotation = run(:get_tile_rotation, x, y) || :none
+    tile.color = run(:get_tile_color, x, y)|| 0xFF_FFFFFF
     tile
   end
 
   def get_block(x, y, z)
     block = Block.new
     block.type = run(:get_block_type, x, y, z)
-    block.rotation = run(:get_block_rotation, x, y, z)
-    block.color = run(:get_block_rotation, x, y, z)
-    block.decorations = run(:get_block_rotation, x, y, z)
+    return nil unless block.type
+    block.rotation = run(:get_block_rotation, x, y, z) || :none
+    block.color = run(:get_block_color, x, y, z) || 0xFF_FFFFFF
+    block.decorations = run(:get_block_decorations, x, y, z) || {}
     block
   end
 
@@ -60,6 +62,7 @@ class Pass
   # Used to capture arguments to be passed to a block
   def run(name, *args)
     custom = self[name]
+    return unless custom
     proc = Proc.new do
       custom.call *args
     end

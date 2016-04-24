@@ -1,6 +1,6 @@
 class SingleBlockLayerWorld < FiniteIsometricWorld
   def initialize(size_x, size_y, size_z, **options)
-    super 0, size_x, 0, size_y, 0 , size_z, asset_name: :simple, **options
+    super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
   end
 
   def make_passes

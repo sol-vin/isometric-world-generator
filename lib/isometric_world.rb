@@ -1,9 +1,10 @@
-class IsometricWorld
-  class << self
-    attr_reader :worlds
+require_relative './isometric_worlds'
 
+class IsometricWorld
+
+  class << self
     def inherited(base)
-        @worlds[base.to_s.to_sym] = base
+      IsometricWorlds[base.to_s.to_sym] = base
     end
   end
 
@@ -15,15 +16,22 @@ class IsometricWorld
   attr_reader :view
   attr_reader :assets
 
+  # should we draw the tiles or blocks?
+  attr_accessor :draw_tiles, :draw_blocks
+  alias_method :draw_tiles?, :draw_tiles
+  alias_method :draw_blocks?, :draw_blocks
+
   def initialize(**options)
     @assets = IsometricAssets.new(options[:asset_name])
     @view = VIEWS.values.last
+    @draw_tiles = true
+    @draw_blocks = true
   end
 
   def get_tile_position(x, y)
     spacing = Vector2.new((assets.tile_width/2.0).round, (assets.tile_height/2.0).round)
-    Vector2.new((-x * spacing.x) + (y * spacing.x) - y + x + OFFSET.x,
-                (x * spacing.y) + (y*spacing.y) - y - x + OFFSET.y)
+    Vector2.new((-x * spacing.x) + (y * spacing.x) - y + x,
+                (x * spacing.y) + (y*spacing.y) - y - x)
   end
 
   def get_block_position(x, y, z)
@@ -43,3 +51,5 @@ class IsometricWorld
     @view = VIEWS.invert[view]
   end
 end
+
+require_rel '/worlds/'

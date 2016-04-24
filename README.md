@@ -1,6 +1,5 @@
-# Isometric::World::Generator
+# Isometric World Generator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/isometric/world/generator`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -18,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install isometric-world-generator
+    $ gem install isometric_world_generator
 
 ## Usage
 
@@ -32,7 +31,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/isometric-world-generator.
+Bug reports and pull requests are welcome on GitHub at https://github.com/redcodefinal/isometric-world-generator.
 
 
 ## License

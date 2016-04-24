@@ -13,7 +13,7 @@ class BasicPerlinWorld < FiniteIsometricWorld
   def make_passes
     super
 
-    @passes[0] = Pass.new(self)
+    @passes[0] = DebugAxisColorPass.new(self)
     @passes[0].define(:get_tile_type) {|x, y| :tile}
 
     @passes[0].define :get_block_type do |x, y, z|
@@ -22,19 +22,6 @@ class BasicPerlinWorld < FiniteIsometricWorld
       else
         nil
       end
-    end
-
-    @passes[0].define :get_block_color do |x, y, z|
-      r = (255 * (x.to_f/x_range.count)).to_i
-      b = (255 * (y.to_f/y_range.count)).to_i
-      g = (255 * (z.to_f/z_range.count)).to_i
-
-      color = 0xFF_000000
-
-      color += r << 16
-      color += g << 8
-      color += b
-      color
     end
   end
 end

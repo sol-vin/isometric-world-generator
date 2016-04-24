@@ -87,6 +87,8 @@ class Viewer < Gosu::Window
     @rotate_ccw_button = Key.new Gosu::KbQ
     @zoom_in_button = Key.new Gosu::KbZ
     @zoom_out_button = Key.new Gosu::KbX
+    @save_button = Key.new Gosu::KbE
+
   end
 
   def update
@@ -148,7 +150,14 @@ class Viewer < Gosu::Window
       @zoom = 0 if @zoom < 0
     end
 
-    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, g_t: #{} d_t: #{@time}"
+    if @save_button.was_pressed?
+      world_path = File.absolute_path File.dirname(__FILE__) + "/../saves/#{get_current_world.to_s}/"
+      Dir.mkdir(world_path)
+      last_number = Dir.entries(world_path).map{|a| a.split(?.).first.to_i}.sort.last
+      @image.save(world_path + "#{last_number}.png")
+    end
+
+    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, g_t: #{} d_t: #{@time} world: #{get_current_world.to_s}"
 
     Key.post_update_keys self
   end

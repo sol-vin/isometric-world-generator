@@ -56,9 +56,9 @@ class Viewer < Gosu::Window
   end
 
   CAMERA_SPEED = 10
-  SIZE_X = 3
-  SIZE_Y = 3
-  SIZE_Z = 3
+  SIZE_X = 20
+  SIZE_Y =20
+  SIZE_Z = 20
   def initialize
     super(1200, 600, false)
 
@@ -101,20 +101,23 @@ class Viewer < Gosu::Window
 
     if @next_view_button.was_pressed?
       @generator += 1
-      @generator = 0 if @generator > @generators.length-1
-      force_redraw
+      @generator = 0 if @generator > IsometricWorlds.count-1
       view = @world.view
       @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
+      @world.make_world
       @world.view = view
+      force_redraw
     end
 
     if @last_view_button.was_pressed?
       @generator -= 1
-      @generator = @generators.length-1 if @generator < 0
-      force_redraw
+      @generator = IsometricWorlds.count-1 if @generator < 0
       view = @world.view
       @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
+      @world.make_world
+
       @world.view = view
+      force_redraw
     end
 
     if @draw_hard_button.was_pressed?

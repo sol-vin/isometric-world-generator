@@ -13,7 +13,7 @@ class IsometricWorld
   VIEWS = {north_west: :south_west, north_east: :north_west, south_east: :north_east, south_west: :south_east}
   ROTATIONS = [:deg0, :deg90, :deg180, :deg270]
 
-  attr_reader :view
+  attr_accessor :view
   attr_reader :assets
 
   # should we draw the tiles or blocks?

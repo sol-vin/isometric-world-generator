@@ -55,7 +55,9 @@ class Pass
 
   def define(name, &block)
     fail "Bad custom name" unless CUSTOM_METHODS.keys.include? name
-    fail "Wrong number of arguments for custom" unless CUSTOM_METHODS[name] == block.parameters.count
+    unless CUSTOM_METHODS[name] == block.parameters.count
+      fail "Wrong number of arguments for custom"
+    end
     @customs[name] = block
   end
 

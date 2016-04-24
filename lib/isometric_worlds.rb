@@ -16,5 +16,9 @@ class IsometricWorlds
     def world_names
       @worlds.keys
     end
+
+    def count
+      @worlds.count
+    end
   end
 end

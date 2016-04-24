@@ -5,10 +5,12 @@ class IsometricAsset
   attr_reader :tags
   attr_reader :name
   attr_reader :parent
+  attr_reader :type
 
-  def initialize(parent, name)
+  def initialize(parent, type, name)
     @parent = parent
     @name = name
+    @type = type
     @tags = {}
     @config = {}
   end
@@ -29,6 +31,23 @@ class IsometricAsset
     tags[tag] = item
   end
 
+  def width
+    if type == :blocks
+      parent.config[:block_width]
+    elsif type == :tiles
+      parent.config[:tile_width]
+    end
+  end
+
+  def height
+    if type == :blocks
+      parent.config[:block_height]
+    elsif type == :tiles
+      parent.config[:tile_height]
+    end
+  end
+
+
   def draw_asset(x, y, color, view, rotation = :none)
     return :no_layer if config[:views][view][rotation].nil?
 
@@ -39,20 +58,23 @@ class IsometricAsset
       # if you specify a color in the cfg.yml for this asset, it will override the color
       # passed in by argument color.
 
+      if asset_options == 'none'
+        asset_options = {}
+      end
+
       real_color = (asset_options[:color] ? asset_options[:color] : color)
 
       # the scale of the object
       # flip values (flip_h, flip_v) are xor'd with the flip value passed in by the config
-      # TODO: Make flip decisions for non symetrical objects. that need to have bases 16 for each rotation and view
-      scale_h = (flip_h ^ asset_options[:flip_h] ? -1.0 : 1.0)
-      scale_v = (flip_v ^ asset_options[:flip_v] ? -1.0 : 1.0)
+      scale_h = (asset_options[:flip_h] ? -1.0 : 1.0)
+      scale_v = (asset_options[:flip_v] ? -1.0 : 1.0)
 
       # positional correction for the flip
-      pcx = (flip_h ^ asset_options[:flip_h] ? width : 0)
-      pcy = (flip_v ^ asset_options[:flip_v] ? height : 0)
+      pcx = (asset_options[:flip_h] ? width : 0)
+      pcy = (asset_options[:flip_v] ? height : 0)
 
       #Access the asset and draw it
-      parent[name][asset_tag].draw(x + pcx, y + pcy, 1, scale_h, scale_v, real_color)
+      parent[type][name][asset_tag].draw(x + pcx, y + pcy, 1, scale_h, scale_v, real_color)
     end
   end
 end

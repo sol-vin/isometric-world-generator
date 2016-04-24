@@ -7,6 +7,8 @@ class EdgeWorld < FiniteIsometricWorld
     super
 
     @passes[0] = Pass.new(self)
+    @passes[0].define(:get_tile_type) {|x, y| :tile}
+
     @passes[0].define :get_block_type do |x, y, z|
       edge = 0
       edge += 1 if x == 0 or x == x_range.last-1

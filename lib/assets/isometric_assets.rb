@@ -50,6 +50,8 @@ class IsometricAssets
 
     @block_texture = Gosu::Image.new(block_texture_path)
     @tile_texture = Gosu::Image.new(tile_texture_path)
+
+    map_textures
   end
 
   def combine_texture_files(type, type_asset_path)
@@ -75,8 +77,10 @@ class IsometricAssets
       assets_row_to_stitch = []
       current_row = 0
 
-      assets[type][asset_name] = IsometricAsset.new(self, asset_name)
+      assets[type][asset_name] = IsometricAsset.new(self, type, asset_name)
       assets[type][asset_name].read_config(asset_config_path)
+
+
 
       Dir.entries(asset_path).each do |asset_file|
         next if asset_file =~ /^\.*$/ #Returns . and . .as folders
@@ -84,7 +88,11 @@ class IsometricAssets
         next unless asset_file =~ /\.png$/
 
         asset_tag = asset_file.split(?.)[0].to_sym
-        assets[type][asset_name][asset_tag] = Vector2.new(current_row, current_col)
+        subimage_pos = Vector2.new(current_row, current_col)
+
+        assets[type][asset_name][asset_tag] = subimage_pos
+
+
         assets_row_to_stitch << asset_path + asset_file
 
         current_row += 1
@@ -94,6 +102,27 @@ class IsometricAssets
     end
 
     assets_col_to_stitch
+  end
+
+  def map_textures
+    tile_width = config[:tile_width]
+    tile_height = config[:tile_height]
+    block_width = config[:block_width]
+    block_height = config[:block_height]
+
+    assets.each do |type, type_assets|
+      type_assets.each do |asset_name, isometric_asset|
+        isometric_asset.tags.each do |asset_tag, asset_texture_position|
+          if type == :blocks
+            assets[type][asset_name][asset_tag] =
+              @block_texture.subimage(block_width*asset_texture_position.x, block_height*asset_texture_position.y, block_width, block_height)
+          elsif type == :tiles
+            assets[type][asset_name][asset_tag] =
+              @tile_texture.subimage(tile_width*asset_texture_position.x, tile_height*asset_texture_position.y, tile_width, tile_height)
+          end
+        end
+      end
+    end
   end
 
   def read_texture_config(config_yml)

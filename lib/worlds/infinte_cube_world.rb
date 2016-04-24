@@ -7,6 +7,9 @@ class InfiniteCubeWorld < FiniteIsometricWorld
     super
 
     @passes[0] = Pass.new(self)
+    @passes[0].define(:get_tile_type) {|x, y| :tile}
+
+
     @passes[0].define :get_block_type do |x, y, z|
       mod_x = x % 5
       mod_y = y % 5
@@ -18,7 +21,7 @@ class InfiniteCubeWorld < FiniteIsometricWorld
       end
     end
 
-    @passes[0].define :get_block_color do
+    @passes[0].define :get_block_color do |x, y, z|
       0xFF_FF0000
     end
   end

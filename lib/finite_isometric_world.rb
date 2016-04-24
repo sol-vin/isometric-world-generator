@@ -131,19 +131,19 @@ class FiniteIsometricWorld < IsometricWorld
       when :south_west
         x_range.each do |y|
           y_range.each do |x|
-            draw_tile(x - x_range.first, y - y_range.first, size_x - 1 - y, x)
+            draw_tile(x - x_range.first, y - y_range.first, x_range.count - 1 - y, x)
           end
         end
       when :north_west
         y_range.each do |y|
           x_range.each do |x|
-            draw_tile(x - x_range.first, y - y_range.first, size_x - 1 - x, size_y - 1- y)
+            draw_tile(x - x_range.first, y - y_range.first, x_range.count - 1 - x, y_range.count - 1- y)
           end
         end
       when :north_east
         x_range.each do |y|
           y_range.each do |x|
-            draw_tile(x - x_range.first, y - y_range.first, y, size_y - 1 - x)
+            draw_tile(x - x_range.first, y - y_range.first, y, y_range.count - 1 - x)
           end
         end
       else
@@ -171,7 +171,7 @@ class FiniteIsometricWorld < IsometricWorld
         x_range.each do |y|
           y_range.each do |x|
             z_range.each do |z|
-              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, size_x - 1 - y, x, z)
+              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, x_range.count - 1 - y, x, z)
             end
           end
         end
@@ -179,7 +179,7 @@ class FiniteIsometricWorld < IsometricWorld
         y_range.each do |y|
           x_range.each do |x|
             z_range.each do |z|
-              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, size_x - 1 - x, size_y - 1 - y, z)
+              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, x_range.count - 1 - x, x_range.count - 1 - y, z)
             end
           end
         end
@@ -187,7 +187,7 @@ class FiniteIsometricWorld < IsometricWorld
         x_range.each do |y|
           y_range.each do |x|
             z_range.each do |z|
-              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, y, size_y - 1 - x, z)
+              draw_block(x - x_range.first, y - y_range.first, z - z_range.first, y, x_range.count - 1 - x, z)
             end
           end
         end

@@ -157,7 +157,7 @@ class Viewer < Gosu::Window
       @image.save(world_path + "#{last_number}.png")
     end
 
-    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, g_t: #{} d_t: #{@time} world: #{get_current_world.to_s}"
+    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} d_t: #{@time} world: #{get_current_world.to_s}"
 
     Key.post_update_keys self
   end

@@ -62,6 +62,7 @@ class IsometricAssets
     Dir.entries(type_asset_path).each do |asset_name|
       next if asset_name =~ /^\.*$/ #Returns . and . .as folders
       next if asset_name == "config.yml"
+      next if asset_name.chars.first == ?_
       next unless File.directory?(type_asset_path + asset_name)
 
 

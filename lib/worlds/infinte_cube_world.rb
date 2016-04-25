@@ -14,7 +14,7 @@ class InfiniteCubeWorld < FiniteIsometricWorld
       mod_x = x % 5
       mod_y = y % 5
 
-      if z < 3 and (2..4).include?(mod_x) and (2..4).include?(mod_y)
+      if z < 3 and (1..3).include?(mod_x) and (1..3).include?(mod_y)
         :block
       else
         nil

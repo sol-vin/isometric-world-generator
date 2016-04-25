@@ -10,26 +10,26 @@ views:
         color: 0x10ffffff
         flip_h: true
       light:
-        color: 0x20ffffff
+        color: 0x10ffffff
   north_east:
     none:
       base: none
       light_side:
         color: 0x10ffffff
       light:
-        color: 0x20ffffff
+        color: 0x10ffffff
   south_west:
     none:
       base: none
       shade_side:
-        color: 0x30ffffff
+        color: 0x10ffffff
+        flip_h: true
       light:
-        color: 0x20ffffff
+        color: 0x10ffffff
   south_east:
     none:
       base: none
       shade_side:
-        color: 0x30ffffff
-        flip_h: true
+        color: 0x10ffffff
       light:
-        color: 0x20ffffff
+        color: 0x10ffffff

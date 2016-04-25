@@ -1,0 +1,17 @@
+collections:
+  - tiles
+  - basic
+
+views:
+  north_west:
+    none:
+      base: none
+  north_east:
+    none:
+      base: none
+  south_west:
+    none:
+      base: none
+  south_east:
+    none:
+      base: none

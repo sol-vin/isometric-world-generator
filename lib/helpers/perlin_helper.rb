@@ -6,7 +6,9 @@ module PerlinHelper
   PERLIN_OCTAVE = 8
   PERLIN_PERSIST = 0.03
   PERLIN_VALUE_MULTIPLIER = 9
-  PERLIN_HEIGHT_DIMINISH = 1.0
+  PERLIN_X_OFFSET = 0.0523455
+  PERLIN_Y_OFFSET = -0.200001
+  PERLIN_z_OFFSET = -0.921006
 
   attr_reader :seed
   attr_accessor :max_height
@@ -18,7 +20,7 @@ module PerlinHelper
 
 
   def get_perlin_height(x, y)
-    (get_perlin_noise(x, y) * max_height) * PERLIN_HEIGHT_DIMINISH
+    (get_perlin_noise(x, y)+1/2.0) * max_height
   end
 
   #gets perlin noise values from the generator
@@ -36,15 +38,15 @@ module PerlinHelper
 
   def get_perlin_noise_1d(x)
     #TODO: Fix this
-    (@perlin_noise[x * PERLIN_STEP, 0] + 1) / 2.0
+    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, 0]
   end
 
   def get_perlin_noise_2d(x, y)
-    (@perlin_noise[x * PERLIN_STEP, y * PERLIN_STEP] + 1) / 2.0
+    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, (y + PERLIN_Y_OFFSET) * PERLIN_STEP]
   end
 
   def get_perlin_noise_3d(x, y, z)
-    (@perlin_noise[x * PERLIN_STEP, y * PERLIN_STEP, z * PERLIN_STEP] + 1) / 2.0
+    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, (y + PERLIN_Y_OFFSET) * PERLIN_STEP, (z + PERLIN_Z_OFFSET) * PERLIN_STEP]
   end
 
   #gets a random number from the noise generator

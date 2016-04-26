@@ -1,4 +1,4 @@
-class HollowCubeWorld < FiniteIsometricWorld
+class HollowCubes < FiniteIsometricWorld
 
   CUBE_BLOCKS = [
     Vector3.new(0,0,0),
@@ -42,28 +42,36 @@ class HollowCubeWorld < FiniteIsometricWorld
 
 
     @passes[0].define :get_block_type do |x, y, z|
-      mod_x = x % 5
-      mod_y = y % 5
+      mod_x = x % 7
+      mod_y = y % 7
 
-      if z < 3
-        if CUBE_BLOCKS.include? Vector3.new(mod_x-1, mod_y-1, z)
-          :block
-        else
-          nil
+      type = nil
+
+      if z < 5
+        if ((1..5) === mod_x)&& ((1..5) === mod_y)
+          type = :block
+          if ((2..4) === mod_x) || ((2..4) === mod_y)
+            if (1..3) === z
+              type = nil
+            end
+          end
         end
-      else
-        nil
       end
+      type
     end
 
     @passes[0].define :get_block_color do |x, y, z|
       case z
         when 0
-          0xFF_FF0000
-        when 1
-          0xFF_FF7700
-        when 2
           0xFF_FFFF00
+        when 1
+          0xFF_FFBB00
+        when 2
+          0xFF_FF8800
+        when 3
+          0xFF_FF4400
+        when 4
+          0xFF_FF0000
       end
     end
   end

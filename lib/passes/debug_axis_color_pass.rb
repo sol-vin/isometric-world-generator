@@ -14,5 +14,16 @@ class DebugAxisColorPass < Pass
       color += b
       color
     end
+
+    define :get_tile_color do |x, y|
+      r = (255 * (x.to_f/world.x_range.count)).to_i
+      b = (255 * (y.to_f/world.y_range.count)).to_i
+
+      color = 0xFF_000000
+
+      color += r << 16
+      color += b
+      color
+    end
   end
 end

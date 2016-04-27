@@ -1,12 +1,12 @@
 class TileTerrain < FiniteIsometricWorld
   include PerlinHelper
 
-  TYPES = {ocean: -0.1, sand: 0.3, grass: 1}
+  TYPES = {ocean: 0, sand: 0.3, grass: 1}
 
   def initialize(size_x, size_y, size_z, **options)
     super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
 
-    self.seed = (rand * 10000000).to_i
+    self.seed = (rand * 1000)
     self.max_height = 10
   end
 

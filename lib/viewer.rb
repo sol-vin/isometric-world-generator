@@ -88,7 +88,7 @@ class Viewer < Gosu::Window
     @zoom_in_button = Key.new Gosu::KbZ
     @zoom_out_button = Key.new Gosu::KbX
     @save_button = Key.new Gosu::KbE
-
+    @randomize_button = Key.new Gosu::KbSpace
   end
 
   def update
@@ -155,6 +155,14 @@ class Viewer < Gosu::Window
       Dir.mkdir(world_path)
       last_number = Dir.entries(world_path).map{|a| a.split(?.).first.to_i}.sort.last
       @image.save(world_path + "#{last_number}.png")
+    end
+
+    if @randomize_button.was_pressed?
+      view = @world.view
+      @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
+      @world.make_world
+      @world.view = view
+      force_redraw
     end
 
     self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} d_t: #{@time} world: #{get_current_world.to_s}"

@@ -15,7 +15,7 @@ class BasicPerlinWorld < FiniteIsometricWorld
     @passes[0].define(:get_tile_type) {|x, y| :tile}
 
     @passes[0].define :get_block_type do |x, y, z|
-      if z < get_perlin_height(x, y).abs
+      if z < get_perlin_height(x, y)
         :block
       else
         nil

@@ -3,12 +3,12 @@ require 'perlin'
 module PerlinHelper
 
   PERLIN_STEP = 0.02
-  PERLIN_OCTAVE = 8
+  PERLIN_OCTAVE = 16
   PERLIN_PERSIST = 0.03
   PERLIN_VALUE_MULTIPLIER = 9
   PERLIN_X_OFFSET = 0.0523455
   PERLIN_Y_OFFSET = -0.200001
-  PERLIN_z_OFFSET = -0.921006
+  PERLIN_Z_OFFSET = -0.921006
 
   attr_reader :seed
   attr_accessor :max_height
@@ -20,7 +20,7 @@ module PerlinHelper
 
 
   def get_perlin_height(x, y)
-    (get_perlin_noise(x, y)+1/2.0) * max_height
+    (get_perlin_noise(x, y) +  1/2.0) * max_height
   end
 
   #gets perlin noise values from the generator

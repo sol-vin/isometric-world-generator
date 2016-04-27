@@ -1,35 +1,5 @@
 class HollowCubes < FiniteIsometricWorld
 
-  CUBE_BLOCKS = [
-    Vector3.new(0,0,0),
-    Vector3.new(0,0,1),
-    Vector3.new(0,0,2),
-
-    Vector3.new(1,0,0),
-    Vector3.new(1,0,2),
-
-    Vector3.new(0,1,0),
-    Vector3.new(0,1,2),
-
-    Vector3.new(2,0,0),
-    Vector3.new(2,0,1),
-    Vector3.new(2,0,2),
-
-    Vector3.new(0,2,0),
-    Vector3.new(0,2,1),
-    Vector3.new(0,2,2),
-
-    Vector3.new(1,2,0),
-    Vector3.new(1,2,2),
-
-    Vector3.new(2,1,0),
-    Vector3.new(2,1,2),
-
-    Vector3.new(2,2,0),
-    Vector3.new(2,2,1),
-    Vector3.new(2,2,2),
-  ]
-
   def initialize(size_x, size_y, size_z, **options)
     super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
   end

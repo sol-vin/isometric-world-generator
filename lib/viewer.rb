@@ -56,8 +56,8 @@ class Viewer < Gosu::Window
   end
 
   CAMERA_SPEED = 10
-  SIZE_X = 80
-  SIZE_Y = 80
+  SIZE_X = 60
+  SIZE_Y = 60
   SIZE_Z = 20
   def initialize
     super(1200, 600, false)
@@ -65,7 +65,7 @@ class Viewer < Gosu::Window
     Gosu::enable_undocumented_retrofication
 
     @camera = Vector2.new(0,0)
-    @generator = 4
+    @generator = 6
 
     @zoom_modes = [0.5, 1, 2, 4, 8, 16, 32]
     @zoom = 1
@@ -165,7 +165,7 @@ class Viewer < Gosu::Window
       force_redraw
     end
 
-    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} d_t: #{@time} world: #{get_current_world.to_s}"
+    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} d_t: #{@time} world: #{get_current_world.to_s} gen: #{@generator}"
 
     Key.post_update_keys self
   end

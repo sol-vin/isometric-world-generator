@@ -1,11 +1,7 @@
-class SmoothedPerlinWorld < FiniteIsometricWorld
-  include PerlinHelper
+class SmootherTestWorld < FiniteIsometricWorld
 
   def initialize(size_x, size_y, size_z, **options)
     super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
-
-    self.seed = (rand * 10000000)
-    self.max_height = 10
   end
 
   def make_passes
@@ -18,22 +14,26 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
 
 
     @passes[0].define :get_block_type do |x, y, z|
-      if z < get_perlin_height(x, y)
+      x_median = x_range.count / 2
+      y_median = x_range.count / 2
+
+      if (x == x_median or y == y_median) and z == 0
         :block
       else
         nil
       end
     end
-
+    @passes[0].define(:get_block_color) { |x, y, z| 0xFF_00FF00}
     @passes[0].define(:get_block_rotation) { |x, y, z| :deg0}
 
-    @passes[1] = DebugAxisColorPass.new(self)
+
+    @passes[1] = Pass.new(self)
     @passes[1].define :get_block_type do |x, y, z|
       block_position = Vector3.new(x - x_range.first, y - y_range.first, z - z_range.first)
 
       if !blocks[block_position.x][block_position.y][block_position.z].type
         viable = find_viable_ramp_neighbors(x, y, z)
-        if viable.count > 0 and (z == z_range.first or blocks[block_position.x][block_position.y][block_position.z-1].type == :block)
+        if viable.count == 1 and (z == z_range.first or blocks[block_position.x][block_position.y][block_position.z-1].type == :block)
           :block_ramp
         else
           nil
@@ -62,10 +62,23 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
         :deg0
       end
     end
+
+    @passes[1].define(:get_block_color) do |x, y, z|
+      block_position = Vector3.new(x - x_range.first, y - y_range.first, z - z_range.first)
+
+      if blocks[block_position.x][block_position.y][block_position.z].type == :block
+        0xFF_00FF00
+      elsif find_viable_ramp_neighbors(x, y, z).count == 1
+        0xFF_FF0000
+      else
+        0xFF_FF0000
+      end
+    end
   end
 
   def find_viable_ramp_neighbors(x, y, z)
     possible_neighbors = {front: [0,1], left: [1,0], right: [-1,0], back: [0,-1]}
+    block_position = Vector3.new(x - x_range.first, y - y_range.first, z - z_range.first)
 
     possible_neighbors.select do |name, position|
       skip_neighbor = !(x_range.include?(x - position.first) and
@@ -74,12 +87,12 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
       if skip_neighbor
         false
       else
-        base_neighbor = blocks[x - position.first][y - position.last][z]
+        base_neighbor = blocks[block_position.x - position.first][block_position.y - position.last][block_position.z]
         if base_neighbor.type
           if skip_top_z_neighbor
             true
           else
-            base_neighbor_above = blocks[x - position.first][y - position.last][z+1]
+            base_neighbor_above = blocks[block_position.x - position.first][block_position.y - position.last][block_position.z+1]
             base_neighbor_above.type.nil?
           end
         else

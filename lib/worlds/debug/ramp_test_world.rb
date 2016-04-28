@@ -13,7 +13,7 @@ class RampTestWorld < FiniteIsometricWorld
 
 
     @passes[0].define :get_block_type do |x, y, z|
-      if z == 0 and x % 5 == 0 and y % 5 == 0
+      if z == 0 and (x+3) % 5 == 0 and (y+3) % 5 == 0
         :block_ramp
       else
         nil

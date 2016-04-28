@@ -35,7 +35,7 @@ class Vector3 < Struct.new(:x, :y, :z)
 
   [:+ , :-, :*, :/].each do |method|
     define_method method do |other|
-      Vector2.new(self.x.send(method, other.x), self.y(method, other.y))
+      Vector3.new(self.x.send(method, other.x), self.y.send(method, other.y), self.z.send(method, other.z))
     end
   end
 

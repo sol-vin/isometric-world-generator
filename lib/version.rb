@@ -1,3 +1,3 @@
 module IsometricWorldGenerator
-  VERSION = "0.0.6alpha"
+  VERSION = "0.0.7alpha"
 end

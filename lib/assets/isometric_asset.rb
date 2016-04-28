@@ -48,7 +48,7 @@ class IsometricAsset
   end
 
 
-  def draw_asset(x, y, color, view, rotation = :none)
+  def draw_asset(x, y, color, view, rotation = :deg0)
     return :no_layer if config[:views][view][rotation].nil?
 
     config[:views][view][rotation].each do |asset_tag, asset_options|

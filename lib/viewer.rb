@@ -65,7 +65,7 @@ class Viewer < Gosu::Window
     Gosu::enable_undocumented_retrofication
 
     @camera = Vector2.new(0,0)
-    @generator = 0
+    @generator = 4
 
     @zoom_modes = [0.5, 1, 2, 4, 8, 16, 32]
     @zoom = 1
@@ -187,7 +187,7 @@ class Viewer < Gosu::Window
       end
       #puts profiler.report.sort_by(:total_calls).order(:ascending)
     end
-    translate(@camera.x, @camera.y) do
+    translate(@camera.x * @zoom_modes[@zoom], @camera.y * @zoom_modes[@zoom]) do
       @image.draw(740, 190, 1, @zoom_modes[@zoom], @zoom_modes[@zoom])
     end
   end

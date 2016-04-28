@@ -15,6 +15,7 @@ class TileTerrain < FiniteIsometricWorld
 
     @passes[0] = DebugAxisColorPass.new(self)
     @passes[0].define(:get_tile_type) {|x, y| :tile}
+    @passes[0].define(:get_tile_rotation) { |x, y| :deg0}
 
     @passes[0].define(:get_tile_color) do |x, y|
       noise = get_perlin_noise(x, y)

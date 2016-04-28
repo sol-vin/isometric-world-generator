@@ -4,32 +4,32 @@ collections:
 
 views:
   north_west:
-    none:
+    deg0:
       base: none
       light_side:
-        color: 0x10ffffff
+        color: 0x80ffffff
         flip_h: true
       light:
-        color: 0x20ffffff
+        color: 0x80ffffff
   north_east:
-    none:
+    deg0:
       base: none
       light_side:
-        color: 0x10ffffff
+        color: 0x80ffffff
       light:
-        color: 0x20ffffff
+        color: 0x80ffffff
   south_west:
-    none:
+    deg0:
       base: none
       shade_side:
-        color: 0x30ffffff
+        color: 0x80ffffff
       light:
-        color: 0x20ffffff
+        color: 0x80ffffff
   south_east:
-    none:
+    deg0:
       base: none
       shade_side:
-        color: 0x30ffffff
+        color: 0x80ffffff
         flip_h: true
       light:
-        color: 0x20ffffff
+        color: 0x80ffffff

@@ -52,4 +52,3 @@ class IsometricWorld
   end
 end
 
-require_rel '/worlds/'

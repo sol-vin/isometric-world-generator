@@ -13,6 +13,7 @@ class BuildingCity < FiniteIsometricWorld
 
     @passes[0] = DebugAxisColorPass.new(self)
     @passes[0].define(:get_tile_type) {|x, y| :tile}
+    @passes[0].define(:get_tile_rotation) {|x, y| :deg0}
 
     @passes[0].define :get_block_type do |x, y, z|
       if get_perlin_bool_2d(x, y, 1, 8)
@@ -21,5 +22,6 @@ class BuildingCity < FiniteIsometricWorld
         end
       end
     end
+    @passes[0].define(:get_block_rotation) {|x, y, z| :deg0}
   end
 end

@@ -1,3 +1,5 @@
+require_relative './isometric_world'
+
 class IsometricWorlds
   class << self
     def [] world_name
@@ -55,3 +57,5 @@ class IsometricWorlds
     @worlds = {}
   end
 end
+
+require_rel '/worlds/'

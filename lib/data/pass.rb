@@ -11,13 +11,13 @@ class Pass
   }
 
   CUSTOM_DEFAULTS = {
-      get_tile_type: :none,
+      get_tile_type: nil,
       get_tile_rotation: :deg0,
-      get_tile_color: 0x000000,
+      get_tile_color: 0xFF_FFFFFF,
 
-      get_block_type: :none,
+      get_block_type: nil,
       get_block_rotation: :deg0,
-      get_block_color: 0x000000,
+      get_block_color: 0xFF_FFFFFF,
       get_block_decorations: [:none, :none, :none, :none]
   }
 
@@ -37,19 +37,17 @@ class Pass
   def get_tile(x, y)
     tile = Tile.new
     tile.type = run(:get_tile_type, x, y)
-    return nil unless tile.type
-    tile.rotation = run(:get_tile_rotation, x, y) || :none
-    tile.color = run(:get_tile_color, x, y)|| 0xFF_FFFFFF
+    tile.rotation = run(:get_tile_rotation, x, y)
+    tile.color = run(:get_tile_color, x, y)
     tile
   end
 
   def get_block(x, y, z)
     block = Block.new
     block.type = run(:get_block_type, x, y, z)
-    return nil unless block.type
-    block.rotation = run(:get_block_rotation, x, y, z) || :none
-    block.color = run(:get_block_color, x, y, z) || 0xFF_FFFFFF
-    block.decorations = run(:get_block_decorations, x, y, z) || {}
+    block.rotation = run(:get_block_rotation, x, y, z)
+    block.color = run(:get_block_color, x, y, z)
+    block.decorations = run(:get_block_decorations, x, y, z)
     block
   end
 

@@ -4,14 +4,14 @@ collections:
 
 views:
   north_west:
-    none:
+    deg0:
       base: none
   north_east:
-    none:
+    deg0:
       base: none
   south_west:
-    none:
+    deg0:
       base: none
   south_east:
-    none:
+    deg0:
       base: none

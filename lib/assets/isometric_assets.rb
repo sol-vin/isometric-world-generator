@@ -72,7 +72,6 @@ class IsometricAssets
       #try to assign images if they exist
       asset_path = type_asset_path + "#{asset_name}/"
       asset_config_path = asset_path + "config.yml"
-
       next unless File.exist?(asset_config_path)
 
       assets_row_to_stitch = []
@@ -86,6 +85,7 @@ class IsometricAssets
       Dir.entries(asset_path).each do |asset_file|
         next if asset_file =~ /^\.*$/ #Returns . and . .as folders
         next if asset_file == "config.yml"
+        next if asset_file.chars.first == ?_
         next unless asset_file =~ /\.png$/
 
         asset_tag = asset_file.split(?.)[0].to_sym
@@ -145,11 +145,13 @@ class IsometricAssets
   end
 
   def draw_tile(tile, view, position)
+    return unless tile.type
     tile_asset = self[:tiles][tile.type]
     tile_asset.draw_asset(position.x,  position.y, tile.color, view, tile.rotation)
   end
 
   def draw_block(block, view, position)
+    return unless block.type
     block_asset = self[:blocks][block.type]
     block_asset.draw_asset(position.x,  position.y, block.color, view, block.rotation)
   end

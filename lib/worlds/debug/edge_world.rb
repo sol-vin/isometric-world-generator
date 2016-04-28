@@ -8,6 +8,9 @@ class EdgeWorld < FiniteIsometricWorld
 
     @passes[0] = Pass.new(self)
     @passes[0].define(:get_tile_type) {|x, y| :tile}
+    @passes[0].define(:get_tile_color) {|x, y| 0xFF_FFFFFF}
+    @passes[0].define(:get_tile_rotation) {|x, y| :deg0}
+
 
     @passes[0].define :get_block_type do |x, y, z|
       edge = 0
@@ -35,5 +38,7 @@ class EdgeWorld < FiniteIsometricWorld
           0xFF_00FF00
       end
     end
+
+    @passes[0].define(:get_block_rotation) {|x, y, z| :deg0}
   end
 end

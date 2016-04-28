@@ -36,7 +36,8 @@ class FiniteIsometricWorld < IsometricWorld
   end
 
   def clear_tiles
-    @tiles = Array.make_2d_array(x_range.last, y_range.last, :none)
+    @tiles = Array.make_2d_array(x_range.last, y_range.last)
+    @tiles.map! { |x| x.map! {Tile.new}}
   end
 
   def clear_tile_canvas
@@ -45,7 +46,8 @@ class FiniteIsometricWorld < IsometricWorld
 
 
   def clear_blocks
-    @blocks = Array.make_3d_array(x_range.last, y_range.last, z_range.last, :none)
+    @blocks = Array.make_3d_array(x_range.last, y_range.last, z_range.last)
+    @blocks.map! {|x| x.map! {|y| y.map!{Block.new}}}
   end
 
   def clear_block_canvas
@@ -61,14 +63,24 @@ class FiniteIsometricWorld < IsometricWorld
   def merge_canvases
     x_range.count.times do |x|
       y_range.count.times do |y|
-        @tiles[x][y] = tile_canvas[x][y] if tile_canvas[x][y]
+        tile = tile_canvas[x][y]
+        if tile
+          tiles[x][y].type = tile.type if tile.type
+          tiles[x][y].rotation = tile.rotation if tile.rotation
+          tiles[x][y].color = tile.color if tile.color
+        end
       end
     end
 
     x_range.count.times do |x|
       y_range.count.times do |y|
         z_range.count.times do |z|
-          @blocks[x][y][z] = block_canvas[x][y][z] if block_canvas[x][y][z]
+          block = block_canvas[x][y][z]
+          if block
+            blocks[x][y][z].type = block.type if block.type
+            blocks[x][y][z].rotation = block.rotation if block.rotation
+            blocks[x][y][z].color = block.color if block.color
+          end
         end
       end
     end
@@ -115,7 +127,7 @@ class FiniteIsometricWorld < IsometricWorld
 
   def draw_tile(x_pos, y_pos, x, y)
     tile = tiles[x][y]
-    return if tile == :none
+    return unless tile.type
 
     assets.draw_tile(tile, view, get_tile_position(x_pos, y_pos))
   end
@@ -153,7 +165,7 @@ class FiniteIsometricWorld < IsometricWorld
 
   def draw_block(x_pos, y_pos, z_pos, x, y, z)
     block = blocks[x][y][z]
-    return if block == :none
+    return unless block.type
     assets.draw_block(block, view, get_block_position(x_pos, y_pos, z_pos))
   end
 

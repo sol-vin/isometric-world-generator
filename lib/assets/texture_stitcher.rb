@@ -12,8 +12,10 @@ class TextureStitcher
     size_x.times do |x|
       row_image = ImageList.new
       size_y.times do |y|
-        col_image = Image.read(to_stitch[x][y]).first
-        row_image.push col_image
+        if to_stitch[x][y]
+          col_image = Image.read(to_stitch[x][y]).first
+          row_image.push col_image
+        end
       end
       texture_png.push row_image.append(false)
     end

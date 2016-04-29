@@ -10,63 +10,63 @@ views:
         flip_h: true
       base_light_ramp:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg90:
       base_180:
         flip_h: true
       base_180_light_side:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg180:
       base_180:
         flip_h: false
       base_180_light_back:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg270:
       base:
         flip_h: false
       base_light_side:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
   north_east:
     deg0:
       base:
         flip_h: false
       base_light_ramp:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg90:
       base:
         flip_h: true
       base_light_side:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg180:
       base_180:
         flip_h: true
       base_180_light_back:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg270:
       base_180:
         flip_h: false
       base_180_light_side:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
   south_west:
     deg0:
       base_180:
         flip_h: true
       base_180_shade_back:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg90:
       base_180:
         flip_h: false
       base_180_shade_side:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg180:
        base:
          flip_h: false
@@ -78,20 +78,20 @@ views:
         flip_h: true
       base_shade_side:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF
   south_east:
     deg0:
       base_180:
         flip_h: false
       base_180_shade_back:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg90:
       base:
         flip_h: false
       base_shade_side:
         flip_h: false
-        color: 0x80ffffff
+        color: 0x30FFFFFF
     deg180:
       base:
         flip_h: true
@@ -103,4 +103,4 @@ views:
         flip_h: true
       base_180_shade_side:
         flip_h: true
-        color: 0x80ffffff
+        color: 0x30FFFFFF

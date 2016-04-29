@@ -56,8 +56,8 @@ class Viewer < Gosu::Window
   end
 
   CAMERA_SPEED = 10
-  SIZE_X = 60
-  SIZE_Y = 60
+  SIZE_X = 80
+  SIZE_Y = 80
   SIZE_Z = 20
   def initialize
     super(1200, 600, false)

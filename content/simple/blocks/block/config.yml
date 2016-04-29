@@ -7,29 +7,29 @@ views:
     deg0:
       base: none
       light_side:
-        color: 0x80ffffff
+        color: 0x30ffffff
         flip_h: true
       light:
-        color: 0x80ffffff
+        color: 0x30ffffff
   north_east:
     deg0:
       base: none
       light_side:
-        color: 0x80ffffff
+        color: 0x30ffffff
       light:
-        color: 0x80ffffff
+        color: 0x30ffffff
   south_west:
     deg0:
       base: none
       shade_side:
-        color: 0x80ffffff
+        color: 0x30ffffff
       light:
-        color: 0x80ffffff
+        color: 0x30ffffff
   south_east:
     deg0:
       base: none
       shade_side:
-        color: 0x80ffffff
+        color: 0x30ffffff
         flip_h: true
       light:
-        color: 0x80ffffff
+        color: 0x30ffffff

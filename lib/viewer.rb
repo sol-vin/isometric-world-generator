@@ -72,7 +72,7 @@ class Viewer < Gosu::Window
 
 
     @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
-    @world.make_world
+    make_world
 
     @time = 0
 
@@ -106,7 +106,7 @@ class Viewer < Gosu::Window
       @generator = 0 if @generator > IsometricWorlds.count-1
       view = @world.view
       @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
-      @world.make_world
+      make_world
       @world.view = view
       force_redraw
     end
@@ -116,7 +116,7 @@ class Viewer < Gosu::Window
       @generator = IsometricWorlds.count-1 if @generator < 0
       view = @world.view
       @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
-      @world.make_world
+      make_world
 
       @world.view = view
       force_redraw
@@ -160,14 +160,20 @@ class Viewer < Gosu::Window
     if @randomize_button.was_pressed?
       view = @world.view
       @world = get_current_world.new(SIZE_X, SIZE_Y, SIZE_Z)
-      @world.make_world
+      make_world
       @world.view = view
       force_redraw
     end
 
-    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} d_t: #{@time} world: #{get_current_world.to_s} gen: #{@generator}"
+    self.caption = "ICG c:#{@camera.x},#{@camera.y} fps: #{Gosu.fps}, view: #{@world.view} g_t: #{@gen_time} d_t: #{@draw_time} world: #{get_current_world.to_s} gen: #{@generator}"
 
     Key.post_update_keys self
+  end
+
+  def make_world
+    @gen_time = Benchmark.realtime do
+      @world.make_world
+    end
   end
 
   def get_current_world
@@ -182,7 +188,7 @@ class Viewer < Gosu::Window
   def draw_easy
     @image ||= record(1, 1) do
       #profiler = MethodProfiler.observe(IsometricFactory)
-      @time = Benchmark.realtime do
+      @draw_time = Benchmark.realtime do
         @world.draw_world
       end
       #puts profiler.report.sort_by(:total_calls).order(:ascending)

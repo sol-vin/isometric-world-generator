@@ -11,10 +11,9 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
   def make_passes
     super
 
-    @passes[0] = Pass.new(self)
+    @passes[0] = DebugAxisColorPass.new(self)
     @passes[0].define(:get_tile_type) {|x, y| :tile}
     @passes[0].define(:get_tile_rotation) { |x, y| :deg0}
-    @passes[0].define(:get_tile_color) { |x, y| 0xFF_0000FF}
 
 
     @passes[0].define :get_block_type do |x, y, z|
@@ -27,7 +26,7 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
 
     @passes[0].define(:get_block_rotation) { |x, y, z| :deg0}
 
-    @passes[1] = DebugAxisColorPass.new(self)
+    @passes[1] = Pass.new(self)
     @passes[1].define :get_block_type do |x, y, z|
       block_position = Vector3.new(x - x_range.first, y - y_range.first, z - z_range.first)
 

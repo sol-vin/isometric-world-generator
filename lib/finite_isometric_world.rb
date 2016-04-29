@@ -89,6 +89,14 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
+  def get_block(x, y, z)
+    blocks[x - x_range.first][y - y_range.first][z - z_range.first]
+  end
+
+  def set_block(x, y, z, block)
+    block_canvas[x - x_range.first][y - y_range.first][z - z_range.first] = block
+  end
+
   # displays the
   def each_block
     x_range.each do |x|
@@ -100,6 +108,15 @@ class FiniteIsometricWorld < IsometricWorld
     end
   end
 
+  def get_tile(x, y)
+    tiles[x - x_range.first][y - y_range.first]
+  end
+
+  def set_tile(x, y, tile)
+    tile_canvas[x - x_range.first][y - y_range.first] = tile
+  end
+
+
   def each_tile
     x_range.each do |x|
       y_range.each do |y|
@@ -110,13 +127,13 @@ class FiniteIsometricWorld < IsometricWorld
 
   def run_tile_pass(pass)
     each_tile do |x, y|
-      tile_canvas[x - x_range.first][y - y_range.first] = pass.get_tile(x, y)
+      set_tile x, y, pass.get_tile(x, y)
     end
   end
 
   def run_block_pass(pass)
     each_block do |x, y, z|
-      block_canvas[x - x_range.first][y - y_range.first][z - z_range.first] = pass.get_block(x, y, z)
+      set_block x, y, z, pass.get_block(x, y, z)
     end
   end
 

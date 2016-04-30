@@ -1,0 +1,114 @@
+collections:
+  - blocks
+  - basic
+
+views:
+  north_west:
+    deg0:
+      base_0: none
+      base_0_light_top:
+        color: 0x30FFFFFF
+      base_0_light_front:
+        color: 0x20FFFFFF
+    deg90:
+      base_90:
+        flip_h: false
+      base_90_light_top:
+        color: 0x30FFFFFF
+    deg180:
+      base_180: none
+      base_180_light_top:
+        color: 0x30FFFFFF
+      base_180_light_side:
+        flip_h: true
+        color: 0x30FFFFFF
+    deg270:
+      base_90:
+        flip_h: true
+      base_90_light_top:
+        flip_h: true
+        color: 0x30FFFFFF
+      base_90_light_side:
+        flip_h: true
+        color: 0x30FFFFFF
+  north_east:
+    deg0:
+      base_90:
+        flip_h: true
+      base_90_light_top:
+        flip_h: true
+        color: 0x30FFFFFF
+    deg90:
+      base_0: none
+      base_0_light_top:
+        color: 0x30FFFFFF
+      base_0_light_front:
+        color: 0x20FFFFFF
+    deg180:
+      base_90:
+        flip_h: false
+      base_90_light_top:
+        color: 0x30FFFFFF
+      base_90_light_side:
+        color: 0x30FFFFFF
+    deg270:
+      base_180: none
+      base_180_light_top:
+        color: 0x30FFFFFF
+      base_180_light_side:
+        color: 0x30FFFFFF
+  south_east:
+    deg0:
+      base_180: none
+      base_180_light_side:
+        flip_h: true
+        color: 0x30000000
+      base_180_light_top:
+        color: 0x30FFFFFF
+    deg90:
+      base_90:
+        flip_h: true
+      base_90_light_side:
+        flip_h: true
+        color: 0x30000000
+      base_90_light_top:
+        flip_h: true
+        color: 0x30FFFFFF
+    deg180:
+      base_0: none
+      base_0_light_front:
+        color: 0x20000000
+      base_0_light_top:
+        color: 0x30FFFFFF
+    deg270:
+      base_90:
+        flip_h: false
+      base_90_light_top:
+        flip_h: false
+        color: 0x30FFFFFF
+  south_west:
+    deg0:
+      base_90:
+        flip_h: false
+      base_90_light_top:
+        color: 0x30FFFFFF
+      base_90_light_side:
+        color: 0x30000000
+    deg90:
+      base_180: none
+      base_180_light_top:
+        color: 0x30FFFFFF
+      base_180_light_side:
+        color: 0x30000000
+    deg180:
+      base_90:
+        flip_h: true
+      base_90_light_top:
+        flip_h: true
+        color: 0x30FFFFFF
+    deg270:
+      base_0: none
+      base_0_light_front:
+        color: 0x20000000
+      base_0_light_top:
+        color: 0x30FFFFFF

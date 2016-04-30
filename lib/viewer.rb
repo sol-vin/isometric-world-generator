@@ -65,7 +65,7 @@ class Viewer < Gosu::Window
     Gosu::enable_undocumented_retrofication
 
     @camera = Vector2.new(0,0)
-    @generator = 19
+    @generator = 2
 
     @zoom_modes = [0.5, 1, 2, 4, 8, 16, 32]
     @zoom = 1

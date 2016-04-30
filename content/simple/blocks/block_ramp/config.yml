@@ -58,49 +58,49 @@ views:
     deg0:
       base_180:
         flip_h: true
-      base_180_shade_back:
+      base_180_light_back:
         flip_h: true
-        color: 0x30FFFFFF
+        color: 0x30000000
     deg90:
       base_180:
         flip_h: false
-      base_180_shade_side:
+      base_180_light_side:
         flip_h: false
-        color: 0x30FFFFFF
+        color: 0x30000000
     deg180:
        base:
          flip_h: false
-       base_shade_ramp:
+       base_light_ramp:
           flip_h: false
-          color: 0x40ffffff
+          color: 0x30000000
     deg270:
       base:
         flip_h: true
-      base_shade_side:
+      base_light_side:
         flip_h: true
-        color: 0x30FFFFFF
+        color: 0x30000000
   south_east:
     deg0:
       base_180:
         flip_h: false
-      base_180_shade_back:
+      base_180_light_back:
         flip_h: false
-        color: 0x30FFFFFF
+        color: 0x30000000
     deg90:
       base:
         flip_h: false
-      base_shade_side:
+      base_light_side:
         flip_h: false
-        color: 0x30FFFFFF
+        color: 0x30000000
     deg180:
       base:
         flip_h: true
-      base_shade_ramp:
+      base_light_ramp:
         flip_h: true
-        color: 0x40ffffff
+        color: 0x30000000
     deg270:
       base_180:
         flip_h: true
-      base_180_shade_side:
+      base_180_light_side:
         flip_h: true
-        color: 0x30FFFFFF
+        color: 0x30000000

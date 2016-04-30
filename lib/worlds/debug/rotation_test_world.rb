@@ -1,4 +1,8 @@
-class RampTestWorld < FiniteIsometricWorld
+class RotationTestWorld < FiniteIsometricWorld
+  BLOCK_TYPE_1 = :block_diag_corner
+  BLOCK_TYPE_2 = :block_ramp
+
+
   def initialize(size_x, size_y, size_z, **options)
     super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
   end
@@ -14,7 +18,9 @@ class RampTestWorld < FiniteIsometricWorld
 
     @passes[0].define :get_block_type do |x, y, z|
       if z == 0 and (x+3) % 5 == 0 and (y+3) % 5 == 0
-        :block_ramp
+        BLOCK_TYPE_1
+      elsif z == 0 and (x+5) % 5 == 0 and (y+3) % 5 == 0
+        BLOCK_TYPE_2
       else
         nil
       end

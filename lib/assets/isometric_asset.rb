@@ -73,6 +73,8 @@ class IsometricAsset
       pcx = (asset_options[:flip_h] ? width : 0)
       pcy = (asset_options[:flip_v] ? height : 0)
 
+      fail "#{asset_tag} is not valid!" unless parent[type][name][asset_tag]
+
       #Access the asset and draw it
       parent[type][name][asset_tag].draw(x + pcx, y + pcy, 1, scale_h, scale_v, real_color)
     end

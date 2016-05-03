@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7d78f1-3f60-4319-8b0c-b4733c0e9b69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/_source.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_0_light_front.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_0_light_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_180_light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_180_light_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_90.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_90_light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_90_light_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/config.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/simple/blocks/block/shade_side.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/simple/blocks/block_ramp/base_180_shade_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/simple/blocks/block_ramp/base_180_shade_side.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/simple/blocks/block_ramp/base_shade_ramp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/simple/blocks/block_ramp/base_shade_side.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/worlds/debug/ramp_test_world.rb" afterPath="$PROJECT_DIR$/lib/worlds/debug/rotation_test_world.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_corner/_source.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_corner/base.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/_source.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_0_side.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_0_slope.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_0_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_180.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_180_side.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_180_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90_side.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90_slope.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90_slope_side.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90_top.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/blocks.png" afterPath="$PROJECT_DIR$/content/simple/blocks.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/tiles.png" afterPath="$PROJECT_DIR$/content/simple/tiles.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/isometric-world-generator.iml" afterPath="$PROJECT_DIR$/.idea/isometric-world-generator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/blocks/block/config.yml" afterPath="$PROJECT_DIR$/content/simple/blocks/block/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml" afterPath="$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/isometric_asset.rb" afterPath="$PROJECT_DIR$/lib/assets/isometric_asset.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" afterPath="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/viewer.rb" afterPath="$PROJECT_DIR$/lib/viewer.rb" />
     </list>
     <ignored path="isometric-world-generator.iws" />
@@ -40,7 +35,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/isometric-world-generator@test_bed.coverage" NAME="test_bed Coverage Results" MODIFIED="1461999238886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
+    <SUITE FILE_PATH="coverage/isometric-world-generator@test_bed.coverage" NAME="test_bed Coverage Results" MODIFIED="1462250287693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
     <SUITE FILE_PATH="coverage/isometric-world-generator@pass.coverage" NAME="pass Coverage Results" MODIFIED="1459909733134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" MODULE_NAME="isometric-world-generator" />
     <SUITE FILE_PATH="coverage/isometric-world-generator@testbed.coverage" NAME="testbed Coverage Results" MODIFIED="1461689588968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
   </component>
@@ -55,11 +50,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="viewer.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="viewer.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/viewer.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.024752475">
-                  <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -69,7 +64,17 @@
             <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+                  <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="finite_isometric_world.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -122,11 +127,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="building_city.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/worlds/examples/buildings/building_city.rb">
+          <file leaf-file-name="smoother_pass.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/passes/smooth/smoother_pass.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="6" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="3" />
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="perlin_helper.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.13992538">
+                  <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -136,20 +151,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.377049">
+                <state vertical-scroll-proportion="2.938433">
                   <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_diag_corner/config.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.25688073">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
                   <folding />
                 </state>
@@ -159,7 +174,7 @@
           <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/content/simple/blocks/block/config.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.4590163">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
                   <folding />
                 </state>
@@ -176,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/isometric_assets.rb" />
         <option value="$PROJECT_DIR$/bin/setup" />
         <option value="$PROJECT_DIR$/lib/pass.rb" />
         <option value="$PROJECT_DIR$/lib/tile.rb" />
@@ -221,12 +235,13 @@
         <option value="$PROJECT_DIR$/lib/worlds/examples/perlin/smoothed_perlin_world.rb" />
         <option value="$PROJECT_DIR$/lib/finite_isometric_world.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/waveform_generators/sine_wave.rb" />
-        <option value="$PROJECT_DIR$/lib/viewer.rb" />
         <option value="$PROJECT_DIR$/lib/assets/isometric_asset.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/debug/rotation_test_world.rb" />
         <option value="$PROJECT_DIR$/content/simple/blocks/block/config.yml" />
         <option value="$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml" />
         <option value="$PROJECT_DIR$/content/simple/blocks/block_diag_corner/config.yml" />
+        <option value="$PROJECT_DIR$/lib/viewer.rb" />
+        <option value="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" />
       </list>
     </option>
   </component>
@@ -237,9 +252,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -266,6 +281,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -346,6 +362,62 @@
               <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terrain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worlds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shape_repeaters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worlds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="perlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -412,6 +484,46 @@
               <option name="myItemId" value="passes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="passes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -446,6 +558,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="simple" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block_ramp_internal_corner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isometric-world-generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block_ramp_corner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,7 +707,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,19 +719,19 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/factories" />
-      <recent name="$PROJECT_DIR$/lib/helpers" />
-      <recent name="$PROJECT_DIR$/factories" />
-      <recent name="$PROJECT_DIR$/lib/assets" />
-      <recent name="$PROJECT_DIR$/lib/data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/simple/blocks/block_ramp_corner" />
       <recent name="$PROJECT_DIR$/content/simple/blocks/block_corner" />
       <recent name="$PROJECT_DIR$/content/simple/blocks" />
       <recent name="$PROJECT_DIR$/content/example" />
       <recent name="$PROJECT_DIR$/content/simple/block_ramp_corner" />
-      <recent name="$PROJECT_DIR$/content/simple/block_ramp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/simple/blocks/block_rap_corner" />
+      <recent name="$PROJECT_DIR$/lib/factories" />
+      <recent name="$PROJECT_DIR$/lib/helpers" />
+      <recent name="$PROJECT_DIR$/factories" />
+      <recent name="$PROJECT_DIR$/lib/assets" />
     </key>
   </component>
   <component name="RunManager" selected="Ruby.test_bed">
@@ -913,19 +1076,25 @@
       <option name="project" value="LOCAL" />
       <updated>1461906294935</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="0.0.9alpha">
+      <created>1461999925729</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1461999925729</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19900498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20674406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33194155" sideWeight="0.5262726" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08113591" sideWeight="0.47372743" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35496956" sideWeight="0.74055827" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4259635" sideWeight="0.74055827" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -986,7 +1155,8 @@
     <MESSAGE value="10 broken" />
     <MESSAGE value="0.0.7alpha" />
     <MESSAGE value="0.0.8alpha" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.8alpha" />
+    <MESSAGE value="0.0.9alpha" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.9alpha" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1054,13 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9353235">
-          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/isometric_tile_pen.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1072,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,24 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/perlin/smoothed_perlin_world.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding>
-            <marker date="1461982442418" expanded="true" signature="294:690" placeholder=" ... end" />
-            <marker date="1461982442418" expanded="true" signature="712:718" placeholder=" ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/worlds/examples/buildings/building_city.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1262,22 +1406,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/simple/blocks/block/base.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_diag_corner/base_180_light_side.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block/light_side.png">
@@ -1313,14 +1444,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/viewer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024752475">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_ramp/base_180_light_back.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1328,24 +1451,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4590163">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.377049">
-          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_diag_corner/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25688073">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_ramp/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.938433">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/viewer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="28" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/perlin/smoothed_perlin_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1461982442418" expanded="true" signature="294:690" placeholder=" ... end" />
+            <marker date="1461982442418" expanded="true" signature="712:718" placeholder=" ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/passes/smooth/smoother_pass.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13992538">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>

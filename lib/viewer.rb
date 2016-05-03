@@ -60,14 +60,14 @@ class Viewer < Gosu::Window
   SIZE_Y = 80
   SIZE_Z = 20
   def initialize
-    super(1200, 600, false)
+    super(1300, 800, false)
 
     Gosu::enable_undocumented_retrofication
 
     @camera = Vector2.new(0,0)
     @generator = 2
 
-    @zoom_modes = [0.5, 1, 2, 4, 8, 16, 32]
+    @zoom_modes = [0.25, 0.5, 1, 2, 4, 8, 16, 32]
     @zoom = 1
 
 

@@ -3,9 +3,8 @@ require 'perlin'
 module PerlinHelper
 
   PERLIN_STEP = 0.02
-  PERLIN_OCTAVE = 16
-  PERLIN_PERSIST = 0.03
-  PERLIN_VALUE_MULTIPLIER = 9
+  PERLIN_OCTAVE = 1
+  PERLIN_PERSIST = 0
   PERLIN_X_OFFSET = 0.0523455
   PERLIN_Y_OFFSET = -0.200001
   PERLIN_Z_OFFSET = -0.921006
@@ -38,7 +37,7 @@ module PerlinHelper
 
   def get_perlin_noise_1d(x)
     #TODO: Fix this
-    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, 0]
+    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, PERLIN_Z_OFFSET]
   end
 
   def get_perlin_noise_2d(x, y)

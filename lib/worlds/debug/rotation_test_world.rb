@@ -1,5 +1,5 @@
 class RotationTestWorld < FiniteIsometricWorld
-  BLOCK_TYPE_1 = :block_diag_corner
+  BLOCK_TYPE_1 = :block_ramp_corner
   BLOCK_TYPE_2 = :block_ramp
 
 

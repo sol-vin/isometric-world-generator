@@ -5,10 +5,32 @@ collections:
   - example_collection
 
 # List of four views (NW SW NE SE) which hold rotations which hold the layers which hold the assets to draw.
-views:
+#views:
   # {north_west: north_east: south_east: south_west:}
-  direction:
+#  direction:
     # if it has no rotation (:all means draw on all layers and overrides other rotations)
     # [:deg0, :deg90, :deg180, :deg270]
-    rotation:
-      block_asset_name: none
+#    rotation:
+#      block_asset_name: none
+
+views:
+  north_west:
+    deg0:
+    deg90:
+    deg180:
+    deg270:
+  north_east:
+    deg0:
+    deg90:
+    deg180:
+    deg270:
+  south_west:
+    deg0:
+    deg90:
+    deg180:
+    deg270:
+  south_east:
+    deg0:
+    deg90:
+    deg180:
+    deg270:

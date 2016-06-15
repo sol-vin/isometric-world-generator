@@ -16,7 +16,7 @@ class BuildingCity < FiniteIsometricWorld
     @passes[0].define(:get_tile_rotation) {|x, y| :deg0}
 
     @passes[0].define :get_block_type do |x, y, z|
-      if get_perlin_bool_2d(x, y, 1, 8)
+      if get_perlin_bool_3d(x, y, :building_seed.hash, 1, 8)
         if z < get_perlin_height(x, y)
           :block
         end

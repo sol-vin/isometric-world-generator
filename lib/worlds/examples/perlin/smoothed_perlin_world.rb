@@ -4,7 +4,7 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
   def initialize(size_x, size_y, size_z, **options)
     super (0...size_x), (0...size_y), (0...size_z)  , asset_name: :simple, **options
 
-    self.seed = (rand * 10000000)
+    self.seed = ((rand + 1) * 10000000)
     self.max_height = 10
   end
 
@@ -26,6 +26,6 @@ class SmoothedPerlinWorld < FiniteIsometricWorld
 
     @passes[0].define(:get_block_rotation) { |x, y, z| :deg0}
 
-    @passes[1] = SmootherPass.new(self)
+    SmootherPass.new(self).install
   end
 end

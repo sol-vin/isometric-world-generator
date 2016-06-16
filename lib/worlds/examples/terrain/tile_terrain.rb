@@ -27,8 +27,12 @@ class TileTerrain < FiniteIsometricWorld
           false
         end
       end
+      unless type.nil?
+        type = type.first
+      else
+        type = :grass
+      end
 
-      type = type.first
 
       case type
         when :ocean

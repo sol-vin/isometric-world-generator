@@ -1,5 +1,6 @@
 require_relative './isometric_world'
 
+# container class for the array of worlds.
 class IsometricWorlds
   class << self
     def [] world_name

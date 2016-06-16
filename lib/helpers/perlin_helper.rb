@@ -2,12 +2,12 @@ require 'perlin'
 
 module PerlinHelper
 
-  PERLIN_STEP = 0.02
+  PERLIN_STEP = 0.123456789
   PERLIN_OCTAVE = 1
-  PERLIN_PERSIST = 0
-  PERLIN_X_OFFSET = 0.0523455
-  PERLIN_Y_OFFSET = -0.200001
-  PERLIN_Z_OFFSET = -0.921006
+  PERLIN_PERSIST = 0.2
+  PERLIN_X_OFFSET = 0
+  PERLIN_Y_OFFSET = 0
+  PERLIN_Z_OFFSET = 0
 
   attr_reader :seed
   attr_accessor :max_height
@@ -15,11 +15,12 @@ module PerlinHelper
   def seed=(value)
     @seed = value
     @perlin_noise = Perlin::Generator.new(seed, PERLIN_PERSIST, PERLIN_OCTAVE)
+    @perlin_noise.classic = true
   end
 
 
   def get_perlin_height(x, y)
-    (get_perlin_noise(x, y) +  1/2.0) * max_height
+    (get_perlin_noise(x, y) +  1.0/2.0) * max_height
   end
 
   #gets perlin noise values from the generator

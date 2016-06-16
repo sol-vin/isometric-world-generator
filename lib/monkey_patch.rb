@@ -1,3 +1,5 @@
+# simple method additions for useful features.
+
 class Array
   class << self
     def make_2d_array(size_x, size_y, default = nil)

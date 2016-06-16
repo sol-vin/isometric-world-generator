@@ -67,7 +67,7 @@ class Pass
       custom.call *args
     end
 
-    world.instance_exec &proc
+    instance_exec &proc
   end
 
   def [] custom

@@ -1,6 +1,14 @@
 require_relative './data/pass'
 
 class FiniteIsometricWorld < IsometricWorld
+
+  POSSIBLE_NEIGHBORS = {front: {x: 0, y: 1, z: 0},
+                        left: {x: 1, y: 0, z: 0},
+                        right: {x: -1, y: 0, z: 0},
+                        back: { x: 0, y: -1, z: 0},
+                        top: {x: 0, y: 0, z: -1},
+                        bottom: {x: 0, y: 0, z: 1}}
+
   IsometricWorlds.delete(:FiniteIsometricWorld)
 
   #ranges of the blocks to display.
@@ -231,5 +239,29 @@ class FiniteIsometricWorld < IsometricWorld
   def draw_world
     draw_all_tiles if draw_tiles?
     draw_all_blocks if draw_blocks?
+  end
+
+  def find_neighbors(x, y, z)
+    # hash for the possible neighbors around a block
+
+    # select only the neighbors that this block (x, y, z) hash and repeat them.
+    neighbors = POSSIBLE_NEIGHBORS.select do |name, position|
+
+      #check if the current possible neighbor would be out of bounds of the world
+      skip_neighbor = !(x_range.include?(x - position[:x]) and
+        y_range.include?(y - position[:y]) and
+        z_range.include?(z - position[:z]))
+      if skip_neighbor
+        false
+      else
+        !blocks[x - position[:x]][y - position[:y]][z - position[:z]].type.nil?
+      end
+    end
+
+    neighbors.each do |direction, position|
+      neighbors[direction] = blocks[x - position[:x]][y - position[:y]][z - position[:z]]
+    end
+
+    neighbors
   end
 end

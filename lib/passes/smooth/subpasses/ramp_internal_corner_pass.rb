@@ -1,4 +1,4 @@
-class RampCornerPass < Pass
+class RampInternalCornerPass < Pass
   def initialize(world, **options)
     super world, **options
 
@@ -10,35 +10,37 @@ class RampCornerPass < Pass
       # if the block is emtpy
       unless world.blocks[block_position.x][block_position.y][block_position.z].type
         neighbors = world.find_neighbors(block_position.x, block_position.y, block_position.z)
+        neighbors.select! {|direction, block| block.type == :block }
 
-        if (!neighbors[:bottom].nil? and [:block, :block_diag_corner, :block_ramp_internal_corner].include?(neighbors[:bottom].type)) or block_position.z == 0
-          neighbors.select! {|direction, block| [:block_ramp, :block_ramp_internal_corner].include? block.type}
-          if neighbors.count == 2
+        if (!neighbors[:bottom].nil? and neighbors[:bottom].type == :block) or block_position.z == 0
+          if neighbors.count == 3
             unless (neighbors.include?(:front) and neighbors.include?(:back)) or
-              (neighbors.include?(:left) and neighbors.include?(:right))
-
-              block_type = :block_ramp_corner
+                   (neighbors.include?(:left) and neighbors.include?(:right)) or
+                   neighbors[:top]
+               block_type = :block_ramp_internal_corner
             end
           end
         end
+
       end
+
       block_type
     end
   end
 end
 
-class RampCornerRotationPass < Pass
+class RampInternalCornerRotationPass < Pass
   def initialize(world, **options)
     super world, **options
     define(:get_block_rotation) do |x, y, z|
       block_position = Vector3.new(x - world.x_range.first, y -  world.y_range.first, z -  world.z_range.first)
 
       neighbors = world.find_neighbors(block_position.x, block_position.y, block_position.z)
-      neighbors.select! {|direction, block| [:block_ramp, :block_ramp_internal_corner].include? block.type}
+      neighbors.select! {|direction, block| block.type == :block}
 
       rotation = nil
 
-      if world.blocks[block_position.x][block_position.y][block_position.z].type == :block_ramp_corner
+      if world.blocks[block_position.x][block_position.y][block_position.z].type == :block_ramp_internal_corner
         if neighbors[:front] and neighbors[:left]
           rotation = :deg180
         elsif neighbors[:back] and neighbors[:right]

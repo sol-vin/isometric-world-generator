@@ -1,0 +1,58 @@
+collections:
+  - blocks
+  - basic
+  - ramps
+
+views:
+  north_west:
+    deg0:
+      base_0:
+        flip_h: false
+    deg90:
+      base_90:
+        flip_h: true
+    deg180:
+      base_180:
+        flip_h: false
+    deg270:
+      base_90:
+        flip_h: false
+  north_east:
+    deg0:
+      base_90:
+        flip_h: false
+    deg90:
+      base_0:
+         flip_h: false
+    deg180:
+      base_90:
+        flip_h: true
+    deg270:
+      base_180:
+        flip_h: false
+  south_west:
+    deg0:
+      base_90:
+        flip_h: true
+    deg90:
+      base_180:
+        flip_h: false
+    deg180:
+      base_90:
+        flip_h: false
+    deg270:
+      base_0:
+        flip_h: false
+  south_east:
+    deg0:
+      base_180:
+        flip_h: false
+    deg90:
+      base_90:
+        flip_h: false
+    deg180:
+      base_0:
+        flip_h: false
+    deg270:
+      base_90:
+        flip_h: true

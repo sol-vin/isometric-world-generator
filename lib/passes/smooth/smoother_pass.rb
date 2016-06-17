@@ -9,5 +9,9 @@ class SmootherPass
   def install
     @world.passes << RampPass.new(@world)
     @world.passes << RampRotationPass.new(@world)
+    @world.passes << RampInternalCornerPass.new(@world)
+    @world.passes << RampInternalCornerRotationPass.new(@world)
+    @world.passes << RampCornerPass.new(@world)
+    @world.passes << RampCornerRotationPass.new(@world)
   end
 end

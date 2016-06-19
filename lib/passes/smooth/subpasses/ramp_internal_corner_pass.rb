@@ -13,7 +13,7 @@ class RampInternalCornerPass < Pass
         neighbors.select! {|direction, block| block.type == :block }
 
         if (!neighbors[:bottom].nil? and neighbors[:bottom].type == :block) or block_position.z == 0
-          if neighbors.count == 3
+          if neighbors.count >= 2
             unless (neighbors.include?(:front) and neighbors.include?(:back)) or
                    (neighbors.include?(:left) and neighbors.include?(:right)) or
                    neighbors[:top]

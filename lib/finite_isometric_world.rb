@@ -83,9 +83,6 @@ class FiniteIsometricWorld < IsometricWorld
     x_range.count.times do |x|
       y_range.count.times do |y|
         z_range.count.times do |z|
-          if x == 5 and y == 5
-            puts
-          end
           block = block_canvas[x][y][z]
           if block
             blocks[x][y][z].type = block.type if block.type

@@ -13,5 +13,7 @@ class SmootherPass
     @world.passes << RampInternalCornerRotationPass.new(@world)
     @world.passes << RampCornerPass.new(@world)
     @world.passes << RampCornerRotationPass.new(@world)
+    #@world.passes << DiagCornerPass.new(@world)
+    #@world.passes << DiagCornerRotationPass.new(@world)
   end
 end

@@ -1,20 +1,50 @@
 require 'perlin'
 
 module PerlinHelper
+  attr_reader :perlin_step
+  attr_reader :perlin_octave
+  attr_reader :perlin_persist
+  attr_reader :perlin_x_offset
+  attr_reader :perlin_y_offset
+  attr_reader :perlin_z_offset
 
-  PERLIN_STEP = 0.123456789
-  PERLIN_OCTAVE = 1
-  PERLIN_PERSIST = 0.2
-  PERLIN_X_OFFSET = 0
-  PERLIN_Y_OFFSET = 0
-  PERLIN_Z_OFFSET = 0
+
+  DEFAULTS = {
+    perlin_step: 0.123456789,
+    perlin_octave: 1,
+    perlin_persist: 0.2,
+    perlin_x_offset: 0,
+    perlin_y_offset: 0,
+    perlin_z_offset: 0
+  }
 
   attr_reader :seed
   attr_accessor :max_height
 
+  def make(seed, **options)
+    if options.count.zero?
+      parse_options_hash DEFAULTS
+      self.seed = seed
+    else
+      defaults = DEFAULTS.clone
+      defaults.merge! options
+      parse_options_hash defaults
+      self.seed = seed
+    end
+  end
+
+  def parse_options_hash(options)
+    @perlin_step = options[:perlin_step]
+    @perlin_octave = options[:perlin_octave]
+    @perlin_persist = options[:perlin_persist]
+    @perlin_x_offset = options[:perlin_x_offset]
+    @perlin_y_offset = options[:perlin_y_offset]
+    @perlin_z_offset = options[:perlin_z_offset]
+  end
+
   def seed=(value)
     @seed = value
-    @perlin_noise = Perlin::Generator.new(seed, PERLIN_PERSIST, PERLIN_OCTAVE)
+    @perlin_noise = Perlin::Generator.new(seed, perlin_persist, perlin_octave)
     @perlin_noise.classic = true
   end
 
@@ -38,15 +68,15 @@ module PerlinHelper
 
   def get_perlin_noise_1d(x)
     #TODO: Fix this
-    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, PERLIN_Z_OFFSET]
+    @perlin_noise[(x + perlin_x_offset) * perlin_step, perlin_z_offset]
   end
 
   def get_perlin_noise_2d(x, y)
-    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, (y + PERLIN_Y_OFFSET) * PERLIN_STEP]
+    @perlin_noise[(x + perlin_x_offset) * perlin_step, (y + perlin_y_offset) * perlin_step]
   end
 
   def get_perlin_noise_3d(x, y, z)
-    @perlin_noise[(x + PERLIN_X_OFFSET) * PERLIN_STEP, (y + PERLIN_Y_OFFSET) * PERLIN_STEP, (z + PERLIN_Z_OFFSET) * PERLIN_STEP]
+    @perlin_noise[(x + perlin_x_offset) * perlin_step, (y + perlin_y_offset) * perlin_step, (z + perlin_z_offset) * perlin_step]
   end
 
   #gets a random number from the noise generator

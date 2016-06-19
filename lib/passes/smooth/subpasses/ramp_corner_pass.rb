@@ -21,7 +21,7 @@ class RampCornerPass < Pass
 
         if  block_position.z == 0 or
             (not neighbors[:bottom].nil? and
-            [:block, :block_diag_corner, :block_ramp_internal_corner].include?(neighbors[:bottom].type)) or
+            [:block, :block_diag_corner, :block_ramp_internal_corner].include?(neighbors[:bottom].type)) and
             not neighbors[:top]
 
           neighbors[:bottom] = Block.new()

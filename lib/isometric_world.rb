@@ -53,5 +53,9 @@ class IsometricWorld
   def rotate_clockwise
     @view = VIEWS.invert[view]
   end
+
+  def collections
+    @assets.collections
+  end
 end
 

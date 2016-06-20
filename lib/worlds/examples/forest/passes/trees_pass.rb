@@ -14,8 +14,11 @@ class TreesPass < Pass
       block_type = nil
 
       if z > 1 and neighbors[:bottom] and neighbors[:bottom].type == :block and (neighbors.count {|k, block| block.type}) == 1
-        if get_perlin_bool_3d(x, y, z, 1, 3)
-          block_type = :oak_trees_1
+        if get_perlin_bool_3d(x, y, z, 90, 100)
+          #change block type to trees
+
+          block_type = get_perlin_item_3d(x, y, :trees_seed.hash, world.collections[:trees])
+
         end
       end
       block_type

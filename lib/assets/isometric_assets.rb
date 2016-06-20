@@ -8,11 +8,13 @@ require_relative '../monkey_patch'
 
 class IsometricAssets
   attr_reader :block_texture, :tile_texture, :config
+
   attr_reader :assets, :collections
   attr_reader :block_width, :block_height
 
   def initialize(name)
     @assets = {blocks: {}, tiles: {}}
+    @collections = {}
 
     open_content name
   end
@@ -80,6 +82,19 @@ class IsometricAssets
       assets[type][asset_name] = IsometricAsset.new(self, type, asset_name)
       assets[type][asset_name].read_config(asset_config_path)
 
+      # Add collections
+      asset_config_file = File.open(asset_config_path, "r")
+      collections = YAML.load(asset_config_file.read)['collections'].map(&:to_sym)
+      asset_config_file.close
+
+      collections.each do |collection|
+        if @collections[collection].nil?
+          @collections[collection] = [asset_name]
+        else
+          @collections[collection] << asset_name
+        end
+      end
+
 
 
       Dir.entries(asset_path).each do |asset_file|
@@ -92,7 +107,6 @@ class IsometricAssets
         subimage_pos = Vector2.new(current_row, current_col)
 
         assets[type][asset_name][asset_tag] = subimage_pos
-
 
         assets_row_to_stitch << asset_path + asset_file
 

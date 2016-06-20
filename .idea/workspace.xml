@@ -2,64 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7d78f1-3f60-4319-8b0c-b4733c0e9b69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block/light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block/light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/_source.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base_180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base_180_light_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base_180_light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base_light_ramp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/base_light_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/_source.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_0_face.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_180_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_90.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_90_face.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/base_90_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/_source.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_0_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_0_slope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_0_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_180_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_180_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_90.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_90_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_90_slope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_90_slope_side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/base_90_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_1/_source.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_1/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/tiles/tile/base.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_1/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/tiles/tile/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/passes/smooth/subpasses/diag_corner_pass.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/forest_world.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/fields_pass.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/heightmap_pass.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/terrain_pass.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_2/_source.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_2/base.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_3/_source.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_3/base.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/sample/Untitled.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/sample/_playgorund.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/tiles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/simple/blocks/playground/_source.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_2/config.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/forest/blocks/oak_trees_3/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/forest/tiles/tile/base.png" afterPath="$PROJECT_DIR$/content/forest/tiles/tile/base.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/blocks.png" afterPath="$PROJECT_DIR$/content/simple/blocks.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/simple/tiles.png" afterPath="$PROJECT_DIR$/content/simple/tiles.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/finite_isometric_world.rb" afterPath="$PROJECT_DIR$/lib/finite_isometric_world.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/isometric_assets.rb" afterPath="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" afterPath="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/passes/smooth/smoother_pass.rb" afterPath="$PROJECT_DIR$/lib/passes/smooth/smoother_pass.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/passes/smooth/subpasses/ramp_corner_pass.rb" afterPath="$PROJECT_DIR$/lib/passes/smooth/subpasses/ramp_corner_pass.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/viewer.rb" afterPath="$PROJECT_DIR$/lib/viewer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worlds/examples/buildings/building_city.rb" afterPath="$PROJECT_DIR$/lib/worlds/examples/buildings/building_city.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worlds/examples/perlin/basic_perlin_world.rb" afterPath="$PROJECT_DIR$/lib/worlds/examples/perlin/basic_perlin_world.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worlds/examples/perlin/smoothed_perlin_world.rb" afterPath="$PROJECT_DIR$/lib/worlds/examples/perlin/smoothed_perlin_world.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worlds/examples/terrain/tile_terrain.rb" afterPath="$PROJECT_DIR$/lib/worlds/examples/terrain/tile_terrain.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/isometric_world.rb" afterPath="$PROJECT_DIR$/lib/isometric_world.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb" afterPath="$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb" />
     </list>
     <ignored path="isometric-world-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +34,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/isometric-world-generator@test_bed.coverage" NAME="test_bed Coverage Results" MODIFIED="1466374907482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
+    <SUITE FILE_PATH="coverage/isometric-world-generator@test_bed.coverage" NAME="test_bed Coverage Results" MODIFIED="1466447869672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
     <SUITE FILE_PATH="coverage/isometric-world-generator@pass.coverage" NAME="pass Coverage Results" MODIFIED="1459909733134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" MODULE_NAME="isometric-world-generator" />
     <SUITE FILE_PATH="coverage/isometric-world-generator@testbed.coverage" NAME="testbed Coverage Results" MODIFIED="1461689588968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="isometric-world-generator" />
   </component>
@@ -85,7 +46,7 @@
     <favorites_list name="isometric-world-generator" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3148907">
+    <splitter split-orientation="horizontal" split-proportion="0.609116">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="ramp_pass.rb" pinned="false" current-in-tab="false">
@@ -98,31 +59,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="finite_isometric_world.rb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="finite_isometric_world.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="1.7050067">
                   <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="perlin_helper.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.6875">
-                  <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="isometric_assets.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -136,7 +77,7 @@
             <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/forest_world.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+                  <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -152,31 +93,81 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="trees_pass.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="trees_pass.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.36778846">
-                  <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="terrain_pass.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/passes/terrain_pass.rb">
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/tiles/tile/config.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="13" column="0" selection-start-line="11" selection-start-column="6" selection-end-line="13" selection-end-column="0" />
+                  <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="heightmap_pass.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/passes/heightmap_pass.rb">
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/block/config.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="17" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="3" />
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/oak_trees_1/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/content/forest/blocks/oak_trees_2/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -198,7 +189,6 @@
         <option value="$PROJECT_DIR$/lib/worlds/examples/shape_repeaters/1-pass/infinte_cubes.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/shape_repeaters/1-pass/pyramids.rb" />
         <option value="$PROJECT_DIR$/lib/assets/texture_stitcher.rb" />
-        <option value="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/debug/axis_tester.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/debug/axis_tester_world.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/debug/ramp_test_world.rb" />
@@ -220,7 +210,6 @@
         <option value="$PROJECT_DIR$/lib/worlds/examples/waveform_generators/sine/smooth_sine_wave_2_axis.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/waveform_generators/triangle/smooth_triangle_wave_1_axis.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/waveform_generators/triangle/smooth_triangle_wave_2_axis.rb" />
-        <option value="$PROJECT_DIR$/lib/isometric_world.rb" />
         <option value="$PROJECT_DIR$/lib/isometric_worlds.rb" />
         <option value="$PROJECT_DIR$/lib/monkey_patch.rb" />
         <option value="$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/config.yml" />
@@ -237,12 +226,14 @@
         <option value="$PROJECT_DIR$/lib/worlds/examples/perlin/basic_perlin_world.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/forest/passes/heightmap_pass.rb" />
         <option value="$PROJECT_DIR$/lib/finite_isometric_world.rb" />
-        <option value="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/forest/passes/terrain_pass.rb" />
         <option value="$PROJECT_DIR$/content/forest/blocks/oak_trees_1/config.yml" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/forest/forest_world.rb" />
         <option value="$PROJECT_DIR$/lib/viewer.rb" />
+        <option value="$PROJECT_DIR$/lib/helpers/perlin_helper.rb" />
         <option value="$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb" />
+        <option value="$PROJECT_DIR$/lib/isometric_world.rb" />
+        <option value="$PROJECT_DIR$/lib/assets/isometric_assets.rb" />
       </list>
     </option>
   </component>
@@ -253,9 +244,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -282,6 +273,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -574,27 +566,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="isometric-world-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="isometric-world-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1007,19 +980,26 @@
       <option name="project" value="LOCAL" />
       <updated>1466325905418</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="0.0.11alpha">
+      <created>1466374977282</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1466374977282</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19292426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19955777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33194155" sideWeight="0.5262726" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.47569722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08113591" sideWeight="0.47372743" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5476673" sideWeight="0.74055827" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22008114" sideWeight="0.74055827" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1031,7 +1011,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.47569722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1066,7 +1045,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="68" />
+      <option name="time" value="69" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1076,48 +1055,6 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/isometric-world-generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/debug/ramp_corner_tester.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.3.0@icg/gems/require_all-1.3.3/lib/require_all.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/waveform_generators/sine/smooth_sine_wave_1_axis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/waveform_generators/sine/smooth_sine_wave_2_axis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/waveform_generators/triangle/smooth_triangle_wave_1_axis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/worlds/examples/waveform_generators/triangle/smooth_triangle_wave_2_axis.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1225,13 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/simple/blocks/block_ramp_internal_corner/base_90.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1248,13 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/isometric_world.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83158994">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1276,7 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,23 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,15 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07992895">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/forest/blocks/oak_trees_1/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21314387">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026642984">
           <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,22 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6875">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/forest_world.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/viewer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1428,10 +1306,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_asset.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33173078">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/forest_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers/perlin_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="63" selection-start-line="113" selection-start-column="63" selection-end-line="113" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/worlds/examples/forest/passes/trees_pass.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36778846">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/tiles/tile/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/block/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp_corner/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/block_ramp_internal_corner/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/oak_trees_1/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/forest/blocks/oak_trees_2/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets/isometric_assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/isometric_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8782138">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/finite_isometric_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7050067">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
           <folding />
         </state>
       </provider>

@@ -93,17 +93,17 @@ module PerlinHelper
 
   def get_perlin_int_1d(x, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_1d(x).to_s[-7..-1].to_i % (high-low)) + low
+    (get_perlin_noise_1d(x).to_s.split(?.).last.to_i % (high+1 -low)) + low
   end
 
   def get_perlin_int_2d(x, y, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_2d(x,y).to_s[-7..-1].to_i % (high-low)) + low
+    (get_perlin_noise_2d(x,y).to_s.split(?.).last.to_i % (high+1 -low)) + low
   end
 
   def get_perlin_int_3d(x, y, z, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_3d(x,y,z).to_s[-7..-1].to_i % (high-low)) + low
+    (get_perlin_noise_3d(x,y,z).to_s.split(?.).last.to_i % (high+1 -low)) + low
   end
 
   def get_perlin_float(*args)
@@ -120,17 +120,17 @@ module PerlinHelper
 
   def get_perlin_float_1d(x, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_1d(x).to_s[-7..-1].prepend('.').to_f % (high-low)) + low
+    (get_perlin_noise_1d(x).to_s.split(?.).last.prepend('.').to_f % (high-low)) + low
   end
 
   def get_perlin_float_2d(x, y, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_2d(x,y).to_s[-7..-1].prepend('.').to_f % (high-low)) + low
+    (get_perlin_noise_2d(x,y).to_s.split(?.).last.prepend('.').to_f % (high-low)) + low
   end
 
   def get_perlin_float_3d(x, y, z, low, high)
     throw Exception.new("start must be less than end!") if low >= high
-    (get_perlin_noise_3d(x,y,z).to_s[-7..-1].prepend('.').to_f % (high-low)) + low
+    (get_perlin_noise_3d(x,y,z).to_s.split(?.).last.prepend('.').to_f % (high-low)) + low
   end
 
   #gets a boolean value out of the perlin generator
